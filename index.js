@@ -90,7 +90,7 @@ function drawDarkCycles(timeMode, timeStart, timeEnd, zoomX) {
     .attr("class", "dark-cycles")
     .attr("clip-path", "url(#clip)");
 
-  if (timeMode === "day") {
+  if (timeMode) {
     const darkCycleDuration = 720; // 12 hours in minutes
     const cycleDuration = 1440; // 24 hours in minutes
     
@@ -240,7 +240,7 @@ function updateChart() {
         .attr("x", width / 2)
         .attr("y", height + 40)
         .attr("text-anchor", "middle")
-        .text(timeMode === "day" ? "Time (Days)" : "Time (Seconds)");
+        .text(timeMode === "day" ? "Time (Days)" : "Time (Minutes)");
 
     g.append("text")
         .attr("transform", "rotate(-90)")
@@ -285,7 +285,7 @@ function updateChart() {
     }
 
     // Add dark cycle legend if in day mode
-    if (timeMode === "day") {
+    if (timeMode === "day" || timeMode === "sec") {
         legend.append("rect")
         .attr("x", 0)
         .attr("y", 40)
