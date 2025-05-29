@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* progress bar container */
+#progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: #eee;
+    z-index: 9999;
+}
+
+/* actual progress bar */
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #010306;
+    transition: width 0.1s ease-out;
+}
+
+/* entire website styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", sans-serif;
+}
+
+body {
+    transition: background-color 0.5s ease;
+}
+
+.container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    color:white;
+    text-shadow: 1px 1px 4px #000;
+}
+
+section {
+    position: relative;
+    height: 100ch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+/* slides styling */
+.one {
+    /*background-color:aqua*/
+}
+
+.two {
+    /*background-color:rgb(101, 90, 53)*/
+}
+.three {
+    background-color:white
+}
+.four {
+    background-color:rgb(255, 0, 136)
+}
+
+/*testing*/
+/* Base box styling */
+.box {
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    border: 2px dashed white;
+    background-color: rgba(255, 255, 255, 0.05); /* faint fill */
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
+/* Manually positioned boxes */
+#box-one-a {
+    width: 80%;
+    height: 80%;
+    top: 100px;
+    left: 100px;
+}
+
+#box-one-b {
+    top: 250px;
+    left: 300px;
+}
+
+/* visualization styling */
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.controls label,
+.controls select,
+.controls input {
+  font-size: 14px;
+  margin: 0;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.controls label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+select, input {
+  background-color: white;
+  font-size: 14px;
+  border-radius: 8px;
+  width: 150px;
+  border: 1px solid #ccc;
+}
+
+select:focus, input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+input[type="text"] {
+  width: 200px;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #3498db;
+}
+
+.controls select {
+  width: auto;
+  padding: 6px;
+}
+
+.controls label, .controls select, .controls input {
+  margin: 5px;
+}
+
+.controls-row-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.chart-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+svg {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  height: 500px;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  pointer-events: none;
+  font-size: 14px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.75) transparent transparent transparent;
+}
+
+.description-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.description-container h2 {
+  font-size: 1.5rem;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.description-container p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.description-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+  color: #555;
+}
+
+.description-container ul li {
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+input[type="checkbox"] {
+  width: 24px; /* Set a fixed width */
+  height: 24px; /* Set a fixed height to make it square */
+  border-radius: 4px; /* Slightly rounded edges */
+  background-color: white;
+  border: 2px solid #ccc;
+  appearance: none; /* Remove default styles */
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #3498db; /* Blue background when checked */
+  border-color: #3498db; /* Blue border when checked */
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✔"; /* Add check mark when checked */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+}
+
+input[type="checkbox"]:focus {
+  outline: none;
+  border-color: #2980b9; /* Highlight on focus */
+}
+
+.controls label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.controls input[type="checkbox"] {
+  margin: 0;
+}
+

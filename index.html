@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <div class="container" id="scroll-container">
+
+        <section class="one">
+            <h1>First Page</h1>
+        </section>
+
+        <section class="two">
+            <h1>2 Page</h1>
+        </section>
+
+        <section class="three">
+            <h1>3 Page</h1>
+
+
+            <div class="box" id="box-one-a">
+                <div class="controls">
+                    <div class="control-group">
+                        <label><input type="checkbox" id="toggleMale" checked> Show Males</label>
+                        <label><input type="checkbox" id="toggleFemale" checked> Show Females</label>
+                    </div>
+                    <div class="control-group">
+                        <label for="dataType">Data Type:</label>
+                        <select id="dataType">
+                            <option value="temp">Temperature</option>
+                            <option value="act">Activity</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="controls-row-2">
+                    <!-- <div class="control-group">
+                    <label for="tickMode">Tick Mode:</label>
+                    <select id="tickMode">
+                        <option value="default">Default Ticks</option>
+                        <option value="lightDark">Light/Dark Cycles</option>
+                    </select>
+                    </div> -->
+                    <div class="control-group">
+                        <label for="timeMode">Time Mode:</label>
+                        <select id="timeMode">
+                            <option value="day">Day</option>
+                            <option value="sec">Seconds</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="timeRange">Time Range (Seconds):</label>
+                        <input type="text" id="timeRange" placeholder="e.g. 0-1440">
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <svg id="chart" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet"></svg>
+                </div>
+            </div>
+
+
+            <div class="box" id="box-one-b"></div>
+        </section>
+
+        <section class="four">
+            <h1>4 Page</h1>
+        </section>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
