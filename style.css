@@ -28,7 +28,7 @@
 }
 
 body {
-    transition: background-color 1s ease;
+  transition: background-color 0.5s ease;
 }
 
 .container{
@@ -36,13 +36,6 @@ body {
     overflow-y: scroll;
     height: 100vh;
     scroll-behavior: smooth;
-}
-
-h1 {
-    text-shadow: 1px 1px 4px #000;
-    display: block;
-    color: inherit;
-    text-shadow: none;
 }
 
 section {
@@ -55,84 +48,185 @@ section {
 }
 
 /* slides styling */
-.one h1 {
-    font-size: 3rem;
-    color: white;
+.one .txts {
+  max-width: 60%;
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+
+}
+
+.one #data-link {
+  font-size: 20px;
+  color: black;
+  /* rounded background box */
+  padding: 5px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  margin-top: 10px;
+  background-color: lightgray;
+
+}
+
+.one #data-link:hover {
+  font-size: 22px;
+  transition: all 0.2s ease-in-out;
+}
+
+.one #data-description {
+  padding-bottom: 10px;
+}
+
+.one .animated-txt {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 0.5s;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 40px;
+
+}
+
+.lights {
+  opacity: 0;
+  animation:
+    fadeIn 0.5s ease-in forwards,
+    flicker 5s infinite;
+  /* animation-delay: 1.5s, 1s; */
+  font-size: 30px;
+  /* add drop shadow for text */
+  text-shadow: 0 0 10px rgba(220, 208, 140, 0.5), 
+               0 0 20px rgba(118, 117, 62, 0.5), 
+               0 0 30px rgba(167, 161, 165, 0.3);
+}
+
+#on1 {
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 4px #514f44;
+}
+
+#off1 {
+  color: rgb(81, 81, 81);
+  text-shadow: 1px 1px 2px #ffffff;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; }
+  to {opacity: 1;}
+}
+
+@keyframes flicker {
+  0%,
+  100% {opacity: 1;}
+  2% {opacity: 0.8;}
+  4% {opacity: 0.6;}
+  6% {opacity: 0.9;}
+  8% { opacity: 0.3;}
+  10% { opacity: 1;}
+  12% {opacity: 0.2;}
+  14% {opacity: 0.7;}
+  16% {opacity: 1;}
+  18% { opacity: 0.5;}
+  20% {opacity: 1;}
+  90% {opacity: 1;}
+  92% {opacity: 0.8;}
+  94% {opacity: 0.5;}
+  96% {opacity: 0.2;}
+  98% {opacity: 0.7;}
 }
 
 .two {
-    flex-direction: column;
+  /*background-color:rgb(101, 90, 53)*/
 }
-
-/* Larger and stylized text for section two */
-.two h1 {
-    color: white;
-    font-size: 2rem;
-    line-height: 1.3;
-    text-align: center;
-    margin: 20px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease-in-out;
-}
-
-/* When visible, fade and slide in */
-.two.visible h1 {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 .three {
-    /*background-color:white*/
+  background: #fff; 
 }
 
-/* Larger and stylized text for section two */
 .three h1 {
-    font-size: 3rem;
-    color: black !important;
-    line-height: 1.3;
-    text-align: center;
-    margin: 20px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease-in-out;
+  font-weight: normal;
+  justify-items: center;
 }
 
-/* When visible, fade and slide in */
-.three.visible h1 {
-    opacity: 1;
-    transform: translateY(0);
+.instructions {
+  padding-top: 10px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 600px;
+}
+
+/* Step styling */
+.step {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.2rem;
+  background: rgba(98, 120, 131, 0.302);
+  border-radius: 6px;
+  border: 1px solid #4c4c4c; /* Green accent */
+}
+
+.step-n {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: white;
+  text-shadow:rgba(115, 115, 115, 0.75)  1px 1px 1px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+#on2 {
+  color: white;
+  text-shadow: 1px 1px 4px #37352d;
+}
+
+#off2 {
+  color: rgb(127, 127, 127);
+  text-shadow: 1px 1px 2px #2a2200;
+}
+
+.button-like {
+  display: inline-block;
+  padding: 2px 8px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button-like:hover {
+  background-color: #e0e0e0;
+}
+
+@keyframes light-flicker {
+  0%, 100% { opacity: 1; }
+  20%, 60% { opacity: 0.8; }
+  40%, 80% { opacity: 0.6; }
+}
+
+@keyframes dark-flicker {
+  0%, 100% { opacity: 1; }
+  30%, 70% { opacity: 0.7; }
+  50% { opacity: 0.4; }
+}
+
+/* Make the bold elements stand out */
+strong {
+  font-weight: 700;
+  color: #333;
 }
 
 .four {
-    /*background-color:rgb(255, 0, 136)*/
+  background-color: rgb(255, 0, 136)
 }
-
-.five {
-    flex-direction: column;
-}
-
-/* Larger and stylized text for section two */
-.five h1 {
-    font-size: 3rem;
-    color: white;
-    line-height: 1.3;
-    text-align: center;
-    margin: 20px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease-in-out;
-}
-
-/* When visible, fade and slide in */
-.five.visible h1 {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-
-
 
 /*testing*/
 /* Base box styling */
