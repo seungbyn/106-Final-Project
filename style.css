@@ -2,256 +2,160 @@
 
 /* progress bar container */
 #progress-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 6px;
-  background: #eee;
-  z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: #eee;
+    z-index: 9999;
 }
 
 /* actual progress bar */
 #progress-bar {
-  height: 100%;
-  width: 0%;
-  background: #010306;
-  transition: width 0.1s ease-out;
+    height: 100%;
+    width: 0%;
+    background: #010306;
+    transition: width 0.1s ease-out;
 }
 
 /* entire website styling */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Playfair Display", sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", sans-serif;
 }
 
 body {
-  transition: background-color 0.5s ease;
+    transition: background-color 1s ease;
 }
 
-.container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-  scroll-behavior: smooth;
+.container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    text-shadow: 1px 1px 4px #000;
+    display: block;
+    color: inherit;
+    text-shadow: none;
 }
 
 section {
-  position: relative;
-  height: 100ch;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  scroll-snap-align: start;
+    position: relative;
+    height: 100ch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
 }
 
 /* slides styling */
-.one .txts {
-  max-width: 60%;
-  opacity: 0;
-  animation: fadeIn 2s ease-in forwards;
-
-}
-
-.one #data-link {
-  font-size: 20px;
-  color: black;
-  /* rounded background box */
-  padding: 5px;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-  display: inline-block;
-  margin-top: 10px;
-  background-color: lightgray;
-
-}
-
-.one #data-link:hover {
-  font-size: 22px;
-  transition: all 0.2s ease-in-out;
-}
-
-.one #data-description {
-  padding-bottom: 10px;
-}
-
-.one .animated-txt {
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 0.5s;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 40px;
-
-}
-
-.lights {
-  opacity: 0;
-  animation:
-    fadeIn 0.5s ease-in forwards,
-    flicker 5s infinite;
-  /* animation-delay: 1.5s, 1s; */
-  font-size: 30px;
-  /* add drop shadow for text */
-  text-shadow: 0 0 10px rgba(220, 208, 140, 0.5), 
-               0 0 20px rgba(118, 117, 62, 0.5), 
-               0 0 30px rgba(167, 161, 165, 0.3);
-}
-
-#on1 {
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 1px 4px #514f44;
-}
-
-#off1 {
-  color: rgb(81, 81, 81);
-  text-shadow: 1px 1px 2px #ffffff;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; }
-  to {opacity: 1;}
-}
-
-@keyframes flicker {
-  0%,
-  100% {opacity: 1;}
-  2% {opacity: 0.8;}
-  4% {opacity: 0.6;}
-  6% {opacity: 0.9;}
-  8% { opacity: 0.3;}
-  10% { opacity: 1;}
-  12% {opacity: 0.2;}
-  14% {opacity: 0.7;}
-  16% {opacity: 1;}
-  18% { opacity: 0.5;}
-  20% {opacity: 1;}
-  90% {opacity: 1;}
-  92% {opacity: 0.8;}
-  94% {opacity: 0.5;}
-  96% {opacity: 0.2;}
-  98% {opacity: 0.7;}
+.one h1 {
+    font-size: 3rem;
+    color: white;
 }
 
 .two {
-  /*background-color:rgb(101, 90, 53)*/
+    flex-direction: column;
+}
+
+/* Larger and stylized text for section two */
+.two h1 {
+    color: white;
+    font-size: 2rem;
+    line-height: 1.3;
+    text-align: center;
+    margin: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-in-out;
+}
+
+/* When visible, fade and slide in */
+.two.visible h1 {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .three {
-  background: #fff; 
+    /*background-color:white*/
 }
 
+/* Larger and stylized text for section two */
 .three h1 {
-  font-weight: normal;
-  justify-items: center;
+    font-size: 3rem;
+    color: black !important;
+    line-height: 1.3;
+    text-align: center;
+    margin: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-in-out;
 }
 
-.instructions {
-  padding-top: 10px;
-  padding-bottom: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  max-width: 600px;
-}
-
-/* Step styling */
-.step {
-  font-size: 0.8rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.2rem;
-  background: rgba(98, 120, 131, 0.302);
-  border-radius: 6px;
-  border: 1px solid #4c4c4c; /* Green accent */
-}
-
-.step-n {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  color: white;
-  text-shadow:rgba(115, 115, 115, 0.75)  1px 1px 1px;
-  border-radius: 50%;
-  font-weight: bold;
-  font-size: 0.9rem;
-}
-
-#on2 {
-  color: white;
-  text-shadow: 1px 1px 4px #37352d;
-}
-
-#off2 {
-  color: rgb(127, 127, 127);
-  text-shadow: 1px 1px 2px #2a2200;
-}
-
-.button-like {
-  display: inline-block;
-  padding: 2px 8px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.button-like:hover {
-  background-color: #e0e0e0;
-}
-
-@keyframes light-flicker {
-  0%, 100% { opacity: 1; }
-  20%, 60% { opacity: 0.8; }
-  40%, 80% { opacity: 0.6; }
-}
-
-@keyframes dark-flicker {
-  0%, 100% { opacity: 1; }
-  30%, 70% { opacity: 0.7; }
-  50% { opacity: 0.4; }
-}
-
-/* Make the bold elements stand out */
-strong {
-  font-weight: 700;
-  color: #333;
+/* When visible, fade and slide in */
+.three.visible h1 {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .four {
-  background-color: rgb(255, 0, 136)
+    /*background-color:rgb(255, 0, 136)*/
 }
+
+.five {
+    flex-direction: column;
+}
+
+/* Larger and stylized text for section two */
+.five h1 {
+    font-size: 3rem;
+    color: white;
+    line-height: 1.3;
+    text-align: center;
+    margin: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-in-out;
+}
+
+/* When visible, fade and slide in */
+.five.visible h1 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
 
 /*testing*/
 /* Base box styling */
 .box {
-  position: absolute;
-  width: 200px;
-  height: 120px;
-  /* border: 2px dashed white; */
-  background-color: rgba(255, 255, 255, 0.05);
-  /* faint fill */
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    border: 2px dashed white;
+    background-color: rgba(255, 255, 255, 0.05); /* faint fill */
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
 }
 
 /* Manually positioned boxes */
 #box-one-a {
-  width: 80%;
-  height: 80%;
-  top: 100px;
-  left: 100px;
+    width: 80%;
+    height: 80%;
+    top: 100px;
+    left: 100px;
 }
 
 #box-one-b {
-  top: 250px;
-  left: 300px;
+    top: 250px;
+    left: 300px;
 }
 
 /* visualization styling */
@@ -281,8 +185,7 @@ strong {
   gap: 8px;
 }
 
-select,
-input {
+select, input {
   background-color: white;
   font-size: 14px;
   border-radius: 8px;
@@ -290,8 +193,7 @@ input {
   border: 1px solid #ccc;
 }
 
-select:focus,
-input:focus {
+select:focus, input:focus {
   border-color: #3498db;
   outline: none;
 }
@@ -313,9 +215,7 @@ input[type="checkbox"]:checked {
   padding: 6px;
 }
 
-.controls label,
-.controls select,
-.controls input {
+.controls label, .controls select, .controls input {
   margin: 5px;
 }
 
@@ -337,7 +237,7 @@ svg {
   border: 1px solid #ddd;
   border-radius: 8px;
   width: 100%;
-  height: 300px;
+  height: 500px;
   background-color: #fff;
   margin-top: 20px;
 }
@@ -402,30 +302,23 @@ svg {
 }
 
 input[type="checkbox"] {
-  width: 24px;
-  /* Set a fixed width */
-  height: 24px;
-  /* Set a fixed height to make it square */
-  border-radius: 4px;
-  /* Slightly rounded edges */
+  width: 24px; /* Set a fixed width */
+  height: 24px; /* Set a fixed height to make it square */
+  border-radius: 4px; /* Slightly rounded edges */
   background-color: white;
   border: 2px solid #ccc;
-  appearance: none;
-  /* Remove default styles */
+  appearance: none; /* Remove default styles */
   position: relative;
   transition: all 0.2s ease;
 }
 
 input[type="checkbox"]:checked {
-  background-color: #3498db;
-  /* Blue background when checked */
-  border-color: #3498db;
-  /* Blue border when checked */
+  background-color: #3498db; /* Blue background when checked */
+  border-color: #3498db; /* Blue border when checked */
 }
 
 input[type="checkbox"]:checked::after {
-  content: "✔";
-  /* Add check mark when checked */
+  content: "✔"; /* Add check mark when checked */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -436,8 +329,7 @@ input[type="checkbox"]:checked::after {
 
 input[type="checkbox"]:focus {
   outline: none;
-  border-color: #2980b9;
-  /* Highlight on focus */
+  border-color: #2980b9; /* Highlight on focus */
 }
 
 .controls label {
@@ -450,3 +342,4 @@ input[type="checkbox"]:focus {
 .controls input[type="checkbox"] {
   margin: 0;
 }
+
