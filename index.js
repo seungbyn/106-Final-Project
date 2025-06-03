@@ -31,27 +31,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Handle fade-in effect on section two
-        const sectionTwo = document.querySelector(".two");
-        if (closestSection === sectionTwo) {
-            sectionTwo.classList.add("visible");
-        } else {
-            sectionTwo.classList.remove("visible");
-        }
+        // const sectionTwo = document.querySelector(".two");
+        // if (closestSection === sectionTwo) {
+        //     sectionTwo.classList.add("visible");
+        // } else {
+        //     sectionTwo.classList.remove("visible");
+        // }
         //handle section 3 fade
-        const sectionThree = document.querySelector(".three");
-        if (closestSection === sectionThree) {
-            sectionThree.classList.add("visible");
-        } else {
-            sectionThree.classList.remove("visible");
-        }
+        // const sectionThree = document.querySelector(".three");
+        // if (closestSection === sectionThree) {
+        //     sectionThree.classList.add("visible");
+        // } else {
+        //     sectionThree.classList.remove("visible");
+        // }
 
         // handle section 5 fade
-        const sectionFive = document.querySelector(".five");
-        if (closestSection === sectionFive) {
-            sectionFive.classList.add("visible");
-        } else {
-            sectionFive.classList.remove("visible");
-        }
+        // const sectionFive = document.querySelector(".five");
+        // if (closestSection === sectionFive) {
+        //     sectionFive.classList.add("visible");
+        // } else {
+        //     sectionFive.classList.remove("visible");
+        // }
 
     });
 });
