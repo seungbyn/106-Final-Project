@@ -101,6 +101,13 @@
 
         <section class="seven">
             <!-- raghav: InteractiveVis visualization -->
+            <div id="estrous-chart-container">
+                <div id="chart-estrous"></div>
+                <div id="controls-estrous"></div>
+                <div id="stats-estrous" class="stats-box" style="margin-top: 15px;"></div>
+                <div id="hover-info-estrous" style="margin-top: 15px;"></div>
+                <div id="tooltip-estrous" class="tooltip" style="position: absolute; opacity: 0;"></div>
+            </div>
         </section>
 
         <section class="ten" data-bgcolor="white">
@@ -158,6 +165,18 @@
     </div>
 
     <script src="index.js"></script>
+    <script type="module">
+        import { renderTemperaturePlot } from './interactiveVisPlot.js';
+
+        renderTemperaturePlot(
+            'data/FemTemp.csv',
+            '#chart-estrous',
+            '#controls-estrous',
+            '#stats-estrous',
+            '#hover-info-estrous',
+            '#tooltip-estrous'
+        );
+    </script>
 </body>
 
 </html>
