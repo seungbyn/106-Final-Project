@@ -78,7 +78,7 @@
                 </div>
 
                 <div class="chart-container">
-                    <svg id="chart" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet"></svg>
+                    <svg class="chart" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet"></svg>
                 </div>
             </div>
         </section>
@@ -93,48 +93,6 @@
         </section>
 
         <section class="five">
-            <div class="box" id="box-one-a">
-                <div class="instructions">
-                    <h1>How do mice react to <bdi id="on2">light</bdi> vs. <bdi id="off2">dark</bdi> cycles?</h1>
-                    <h2>Follow instructions below:</h2>
-                    <p><bdi class="step-n">1</bdi>Switch <bdi class="button-like">Time Mode</bdi> to <b>Minutes</b></p>
-                    <p><bdi class="step-n">2</bdi>Switch <bdi class="button-like">Data Type</bdi> to <b>Activity</b></p>
-                    <p><bdi class="step-n">3</bdi>Enter <bdi class="button-like">Time Range</bdi> as <b>0-1440</b> (1440 mins = 24 hrs = 1 day)</p>
-                    <p><bdi class="step-n">4</bdi>What do you notice? Look at the shaded regions.<p>
-                </div>
-                <hr>
-                <div class="controls">
-                    <div class="control-group">
-                        <label><input type="checkbox" id="toggleMale" checked> Show Males</label>
-                        <label><input type="checkbox" id="toggleFemale" checked> Show Females</label>
-                    </div>
-                    <div class="control-group">
-                        <label for="dataType">Data Type:</label>
-                        <select id="dataType">
-                            <option value="temp">Temperature</option>
-                            <option value="act">Activity</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="controls-row-2">
-                    <div class="control-group">
-                        <label for="timeMode">Time Mode:</label>
-                        <select id="timeMode">
-                            <option value="day">Day</option>
-                            <option value="sec">Minutes</option>
-                        </select>
-                    </div>
-                    <div class="control-group">
-                        <label for="timeRange">Time Range (Minutes):</label>
-                        <input type="text" id="timeRange" placeholder="e.g. 0-1440">
-                    </div>
-                </div>
-
-                <div class="chart-container">
-                    <svg id="chart" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet"></svg>
-                </div>
-            </div>
         </section>
 
         <section class="six">
@@ -156,22 +114,40 @@
             </div>
         </section>
 
-        <section class="eleven" data-bgcolor="black">
-            <div class="txts">
-                <h1 class="animated-txt">BUT mice have higher body temperatures at night than during the day.</h1>
-                <h1 class="animated-txt">AND female mice typically have higher body temperatures than male mice.</h1>
-                <!--<h1 class="animated-txt">AND female body temperature varies with the estrous cycle.</h1>-->
-                <h1 class="animated-txt therefore">THEREFORE a single temperature reading clearly does not tell the whole story of mouse health.</h1>
-
-                <div style="display: flex; gap: 2%; margin-top: 2em;">
-                    <iframe src="data/light_dark_temp.html" 
-                            style="flex: 1; height: 400px; background-color: black;" 
-                            frameborder="0"></iframe>
-                    <iframe src="data/temp_by_sex.html" 
-                            style="flex: 1; height: 400px; background-color: black;" 
-                            frameborder="0"></iframe>
+        <section class="eleven">
+            <div class="conclusion-container">
+                
+                <div class="evidence-chart">
+                    <div class="chart-container">
+                        <div style="display: flex; gap: 2%; margin-top: 2em;">
+                            <iframe src="data/light_dark_temp.html" 
+                                    style="flex: 1; height: 400px; width: 300px;" 
+                                    frameborder="0"></iframe>
+                            <iframe src="data/temp_by_sex.html" 
+                                    style="flex: 1; height: 400px; width: 300px; background-color: rgb(255, 255, 255);" 
+                                    frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="key-findings">
+                        <div class="finding-card">
+                            <h3>Mice are Nocturnal</h3>
+                            <p>Mice have higher body temperatures during night hours, reaching up to<span class="data-point">3°C</span> above daytime levels</p>
+                        </div>
+                        <div class="finding-card">
+                            <h3>Females are Hotter ;)</h3>
+                            <p>Female mice show temperatures <span class="data-point">consistently higher</span> than males</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <!-- <div class="txts">
+                <h1 class="animated-txt therefore">THEREFORE a single temperature reading clearly does not tell the whole story of mouse health.</h1>
+            </div> -->
+        </section>
+
+        <section class="twelve">
+            <h1 class="animated-txt">A single temperature reading clearly does not tell the whole story in terms of mouse health.</h1>
         </section>
 
     </div>

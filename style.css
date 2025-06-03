@@ -537,3 +537,73 @@ input[type="checkbox"]:focus {
 .flash-green {
   background-color: rgba(0, 255, 0, 0.3) !important;
 }
+
+/* last slide */
+.eleven {
+  .conclusion-container {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #333;
+  }
+  
+  .highlight {
+    color: #4a6fa5;
+    font-weight: bold;
+  }
+  
+  .evidence-chart {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .chart-instructions {
+    margin-bottom: 1.5rem;
+  }
+  
+  .key-findings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .finding-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .data-point {
+    font-weight: bold;
+    color: #4a6fa5;
+  }
+  
+  .final-thought {
+    background: #4a6fa5;
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+  }
+  
+  #back-to-top {
+    background: white;
+    color: #4a6fa5;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  #back-to-top:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+  }
+  }

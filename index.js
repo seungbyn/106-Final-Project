@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /* visualization÷*/
-const svg = d3.select("#chart");
+const svg = d3.select(".chart");
 const margin = { top: 30, right: 30, bottom: 60, left: 60 };
 const width = 1200 - margin.left - margin.right;
 const height = 500 - margin.top - margin.bottom;
