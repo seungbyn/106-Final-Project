@@ -182,6 +182,8 @@ export async function renderTemperaturePlot(
         const max = d3.max(selectedData);
         const min = d3.min(selectedData);
         stats.html(`Mean: ${mean.toFixed(2)}, Max: ${max.toFixed(2)}, Min: ${min.toFixed(2)}`);
+        stats.style("display", "block"); // <-- this line shows it
+
     }
 
     function brushEnd({ selection }) {
