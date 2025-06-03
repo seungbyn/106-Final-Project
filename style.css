@@ -176,11 +176,6 @@ section {
   background: #fff; 
 }
 
-.three h1 {
-  font-weight: normal;
-  justify-items: center;
-}
-
 .instructions {
   padding-top: 10px;
   padding-bottom: 40px;
@@ -188,18 +183,8 @@ section {
   flex-direction: column;
   gap: 0.5rem;
   max-width: 600px;
-}
-
-/* Step styling */
-.step {
-  font-size: 0.8rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.2rem;
-  background: rgba(98, 120, 131, 0.302);
-  border-radius: 6px;
-  border: 1px solid #4c4c4c; /* Green accent */
+  /* center items */
+  margin: 0 auto;
 }
 
 .step-n {
