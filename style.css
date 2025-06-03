@@ -343,3 +343,20 @@ input[type="checkbox"]:focus {
   margin: 0;
 }
 
+/* emoji styling */
+.emoji-buttons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.emoji {
+    font-size: 5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.emoji:hover {
+    transform: scale(1.2);
+}
