@@ -97,15 +97,51 @@
             <div class="box" id="box-one-b"></div>
         </section>
 
-        <section class="five" data-bgcolor="black">
+        <section class="five" data-bgcolor="white">
             <h1>A similar phenomenon occurs with the mice's temperature.</h1>
             <h1>There seems to be a wide range of data even on a daily basis.</h1>
         </section>
 
-        
+        <section class="six" data-bgcolor="white">
+            <div class="txts" style="text-align: center;">
+                <h1 class="animated-txt">
+                    98.6ºF or 37ºC is a healthy human body temperature.<br>
+                    The mouse equivalent is <span id="mouse-temp-placeholder">98.4ºF or 36.95ºC</span>!
+                </h1>
+                <!--<img src="data/temp.png" alt="Temperature illustration" style="max-width:100%; height:auto; margin-top:1em;">-->
+                <iframe src="data/mouse_activity_chart.html" width="100%" height="600" frameborder="0" style="margin-top:2em;"></iframe>
+            </div>
+        </section>
+
+        <!--<section class="seven" data-bgcolor="black">
+            <div class="txts">
+                <h1 class="animated-txt">BUT mice have higher body temperatures at night than during the day.</h1>
+                <h1 class="animated-txt">AND female mice typically have higher body temperatures than male mice.</h1>
+                <h1 class="animated-txt">AND female body temperature varies with the estrous cycle.</h1>
+                <h1 class="animated-txt therefore">THEREFORE a single temperature reading clearly does not tell the whole story of mouse health.</h1>
+                <iframe src="data/light_dark_temp.html" width="100%" height="600" frameborder="0" style="margin-top:2em;"></iframe>
+                <iframe src="data/temp_by_sex.html" width="100%" height="600" frameborder="0" style="margin-top:2em;"></iframe>
+            </div>
+        </section>-->
+        <section class="seven" data-bgcolor="black">
+    <div class="txts">
+        <h1 class="animated-txt">BUT mice have higher body temperatures at night than during the day.</h1>
+        <h1 class="animated-txt">AND female mice typically have higher body temperatures than male mice.</h1>
+        <!--<h1 class="animated-txt">AND female body temperature varies with the estrous cycle.</h1>-->
+        <h1 class="animated-txt therefore">THEREFORE a single temperature reading clearly does not tell the whole story of mouse health.</h1>
+
+        <div style="display: flex; gap: 2%; margin-top: 2em;">
+            <iframe src="data/light_dark_temp.html" 
+                    style="flex: 1; height: 400px; background-color: black;" 
+                    frameborder="0"></iframe>
+            <iframe src="data/temp_by_sex.html" 
+                    style="flex: 1; height: 400px; background-color: black;" 
+                    frameborder="0"></iframe>
+        </div>
+    </div>
+</section>
 
     </div>
-
     <script src="index.js"></script>
 </body>
 
