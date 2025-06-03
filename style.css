@@ -596,8 +596,29 @@ input[type="checkbox"]:focus {
   fill: black;
 }
 
+.chart-title {
+  color: black;
+  font-family: "Playfair Display";
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.chart-narrative, .chart-summary {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-family: "Playfair Display";
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: black;
+  text-align: center;
+}
+
 #stats-estrous {
-  display: inline-block;
+  display: none; /* hidden by default */
+  max-width: fit-content;
+  margin: 20px auto 0; /* centers it */
   padding: 10px 16px;
   background-color: #f5f5f5;
   border: 1px solid #ccc;
@@ -605,6 +626,6 @@ input[type="checkbox"]:focus {
   font-size: 16px;
   font-family: "Playfair Display", sans-serif;
   color: black;
-  margin-top: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
 }
