@@ -228,7 +228,7 @@ export async function renderTemperaturePlot(
 
     function handleMouseMove(event) {
         tooltip.style("left", (event.pageX + 10) + "px")
-            .style("top", (event.pageY - 20) + "px");
+            .style("top", (event.pageY - 47) + "px");
     }
 
     function handleMouseOut() {

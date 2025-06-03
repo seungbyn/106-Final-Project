@@ -255,7 +255,7 @@ function updateChart() {
 
     svg.on("mousemove", function (event) {
         tooltip
-        .style("top", (event.pageY - 5) + "px")
+        .style("top", (event.pageY + 10) + "px")
         .style("left", (event.pageX - 16) + "px");
     });
 
