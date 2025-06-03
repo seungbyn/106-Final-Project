@@ -31,6 +31,10 @@ body {
   transition: background-color 0.5s ease;
 }
 
+h2 {
+  font-size: 10px;
+}
+
 .zero {
   display: block;
   max-width: 80%;
@@ -204,8 +208,8 @@ section {
   justify-content: center;
   width: 24px;
   height: 24px;
-  color: white;
-  text-shadow:rgba(115, 115, 115, 0.75)  1px 1px 1px;
+  color: rgb(18, 17, 17);
+  text-shadow:rgba(58, 56, 56, 0.75)  1px 1px 1px;
   border-radius: 50%;
   font-weight: bold;
   font-size: 0.9rem;
@@ -263,9 +267,9 @@ strong {
     position: absolute;
     width: 200px;
     height: 120px;
-    border: 2px dashed white;
-    background-color: rgba(255, 255, 255, 0.05); /* faint fill */
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+    /* border: 2px dashed white; */
+    /* background-color: rgba(255, 255, 255, 0.05); faint fill */
+    /* box-shadow: 0 0 4px rgba(255, 255, 255, 0.2); */
 }
 
 /* Manually positioned boxes */

@@ -17,7 +17,7 @@
     <div class="container" id="scroll-container">
         <section class="zero">
             <h1>Measuring <i>health</i>.</h1>
-            <h2 style = "font-size: 10px">SP25 DSC106 Final Project: Kevin Chen, Raghav Dewangan, David Oh, Allyson Ting</h2>
+            <h2>SP25 DSC106 Final Project: Kevin Chen, Raghav Dewangan, David Oh, Allyson Ting</h2>
             <h1 class = "animated-txt">How much do you know about mice? Why mice should matter to you...</h1>
             <img class= "mouse" src="mouse.gif" alt="running mouse">
             <img class= "mouse" src="reverse_mouse.gif" alt="running mouse">
@@ -39,11 +39,15 @@
         </section>
 
         <section class="three">
-            <h1>How do mice react to light vs. dark cycles?</h1>
-            <div>
-
-            </div>
             <div class="box" id="box-one-a">
+                <h1>How do mice react to light vs. dark cycles?</h1>
+                <h2>Follow instructions below:</h2>
+                <div class="instructions">
+                    <p><bdi class="step-n">1</bdi>Switch <bdi class="button-like">Time Mode</bdi> to <b>Minutes</b></p>
+                    <p><bdi class="step-n">2</bdi>Switch <bdi class="button-like">Data Type</bdi> to <b>Activity</b></p>
+                    <p><bdi class="step-n">3</bdi>Enter <bdi class="button-like">Time Range</bdi> as <b>0-1440</b> (1440 mins = 24 hrs = 1 day)</p>
+                    <p><bdi class="step-n">4</bdi>What do you notice? Look at the shaded regions.<p>
+                </div>
                 <div class="controls">
                     <div class="control-group">
                         <label><input type="checkbox" id="toggleMale" checked> Show Males</label>
@@ -70,11 +74,11 @@
                         <label for="timeMode">Time Mode:</label>
                         <select id="timeMode">
                             <option value="day">Day</option>
-                            <option value="sec">Seconds</option>
+                            <option value="sec">Minutes</option>
                         </select>
                     </div>
                     <div class="control-group">
-                        <label for="timeRange">Time Range (Seconds):</label>
+                        <label for="timeRange">Time Range (Minutes):</label>
                         <input type="text" id="timeRange" placeholder="e.g. 0-1440">
                     </div>
                 </div>
@@ -83,9 +87,6 @@
                     <svg id="chart" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet"></svg>
                 </div>
             </div>
-
-
-            <div class="box" id="box-one-b"></div>
         </section>
 
         <section class="five">
