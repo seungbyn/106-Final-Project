@@ -384,3 +384,28 @@ document.getElementById("dataType").addEventListener("change", function () {
 });
 document.getElementById("timeRange").addEventListener("input", updateChart);
 document.getElementById("timeMode").addEventListener("change", updateChart);
+
+// emoji
+document.getElementById('sun-button').addEventListener('click', function() {
+  flashScreen('red');
+});
+
+document.getElementById('moon-button').addEventListener('click', function() {
+  flashScreen('green');
+});
+
+function flashScreen(color) {
+  const overlay = document.getElementById('flash-overlay');
+  
+  // Reset and add the appropriate color class
+  overlay.className = '';
+  overlay.classList.add(`flash-${color}`);
+  
+  // Show the overlay
+  overlay.style.opacity = '1';
+  
+  // Hide after animation
+  setTimeout(() => {
+      overlay.style.opacity = '0';
+  }, 300);
+}

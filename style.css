@@ -239,7 +239,7 @@ section {
 }
 
 .four {
-  background-color: rgb(255, 255, 255)
+  background-color: rgba(255, 255, 255, 0.82)
 }
 
 /*testing*/
@@ -454,4 +454,86 @@ input[type="checkbox"]:focus {
 
 .seven {
   color: white;
+}
+
+/* emoji styling */
+.emoji-buttons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#sun-button {
+  padding-right: 20px;
+}
+
+.emoji {
+  font-size: 5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.emoji:hover {
+  transform: scale(1.2);
+}
+
+.vocab-word {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.thought-bubble {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.thought-bubble:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+.vocab-word:hover .thought-bubble {
+  opacity: 1;
+  visibility: visible;
+}
+
+#flash-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.flash-red {
+  background-color: rgba(255, 0, 0, 0.3) !important;
+}
+
+.flash-green {
+  background-color: rgba(0, 255, 0, 0.3) !important;
 }
