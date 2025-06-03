@@ -387,12 +387,20 @@ document.getElementById("timeRange").addEventListener("input", updateChart);
 document.getElementById("timeMode").addEventListener("change", updateChart);
 
 // emoji
-document.getElementById('sun-button').addEventListener('click', function() {
-  flashScreen('red');
+// document.getElementById('sun-button').addEventListener('click', function() {
+//   flashScreen('red');
+// });
+
+// document.getElementById('moon-button').addEventListener('click', function() {
+//   flashScreen('green');
+// });
+
+document.getElementById('sun-button').addEventListener('click', function () {
+  document.querySelector('.three').scrollIntoView({ behavior: 'smooth' });
 });
 
-document.getElementById('moon-button').addEventListener('click', function() {
-  flashScreen('green');
+document.getElementById('moon-button').addEventListener('click', function () {
+  document.querySelector('.five').scrollIntoView({ behavior: 'smooth' });
 });
 
 function flashScreen(color) {
