@@ -386,9 +386,9 @@ document.getElementById("timeRange").addEventListener("input", updateChart);
 document.getElementById("timeMode").addEventListener("change", updateChart);
 
 document.getElementById("sun-button").addEventListener("click", () => {
-    document.querySelector(".four").scrollIntoView({ behavior: "smooth" });
+    document.querySelector(".four").scrollIntoView({ behavior: "smooth" }); // previous slide
 });
 
 document.getElementById("moon-button").addEventListener("click", () => {
-    document.querySelector(".five").scrollIntoView({ behavior: "smooth" });
+    document.querySelector(".five").scrollIntoView({ behavior: "smooth" }); //next slide
 });
