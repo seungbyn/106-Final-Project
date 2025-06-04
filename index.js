@@ -31,34 +31,34 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Handle fade-in effect on section two
-        const sectionTwo = document.querySelector(".two");
-        if (closestSection === sectionTwo) {
-            sectionTwo.classList.add("visible");
-        } else {
-            sectionTwo.classList.remove("visible");
-        }
+        // const sectionTwo = document.querySelector(".two");
+        // if (closestSection === sectionTwo) {
+        //     sectionTwo.classList.add("visible");
+        // } else {
+        //     sectionTwo.classList.remove("visible");
+        // }
         //handle section 3 fade
-        const sectionThree = document.querySelector(".three");
-        if (closestSection === sectionThree) {
-            sectionThree.classList.add("visible");
-        } else {
-            sectionThree.classList.remove("visible");
-        }
+        // const sectionThree = document.querySelector(".three");
+        // if (closestSection === sectionThree) {
+        //     sectionThree.classList.add("visible");
+        // } else {
+        //     sectionThree.classList.remove("visible");
+        // }
 
         // handle section 5 fade
-        const sectionFive = document.querySelector(".five");
-        if (closestSection === sectionFive) {
-            sectionFive.classList.add("visible");
-        } else {
-            sectionFive.classList.remove("visible");
-        }
+        // const sectionFive = document.querySelector(".five");
+        // if (closestSection === sectionFive) {
+        //     sectionFive.classList.add("visible");
+        // } else {
+        //     sectionFive.classList.remove("visible");
+        // }
 
     });
 });
 
 
 /* visualization÷*/
-const svg = d3.select("#chart");
+const svg = d3.select(".chart");
 const margin = { top: 30, right: 30, bottom: 60, left: 60 };
 const width = 1200 - margin.left - margin.right;
 const height = 500 - margin.top - margin.bottom;
@@ -254,8 +254,9 @@ function updateChart() {
         });
 
     svg.on("mousemove", function (event) {
-        tooltip.style("left", (event.pageX + 10) + "px")
-        .style("top", (event.pageY - 20) + "px");
+        tooltip
+        .style("top", (event.pageY + 10) + "px")
+        .style("left", (event.pageX - 16) + "px");
     });
 
     // Format X-axis ticks
@@ -320,7 +321,7 @@ function updateChart() {
     }
 
     // Add dark cycle legend if in day mode
-    if (timeMode === "day" || timeMode === "sec") {
+    if (timeMode) {
         legend.append("rect")
         .attr("x", 0)
         .attr("y", 40)
@@ -384,3 +385,36 @@ document.getElementById("dataType").addEventListener("change", function () {
 });
 document.getElementById("timeRange").addEventListener("input", updateChart);
 document.getElementById("timeMode").addEventListener("change", updateChart);
+
+// emoji
+// document.getElementById('sun-button').addEventListener('click', function() {
+//   flashScreen('red');
+// });
+
+// document.getElementById('moon-button').addEventListener('click', function() {
+//   flashScreen('green');
+// });
+
+document.getElementById('sun-button').addEventListener('click', function () {
+  document.querySelector('.three').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('moon-button').addEventListener('click', function () {
+  document.querySelector('.five').scrollIntoView({ behavior: 'smooth' });
+});
+
+function flashScreen(color) {
+  const overlay = document.getElementById('flash-overlay');
+  
+  // Reset and add the appropriate color class
+  overlay.className = '';
+  overlay.classList.add(`flash-${color}`);
+  
+  // Show the overlay
+  overlay.style.opacity = '1';
+  
+  // Hide after animation
+  setTimeout(() => {
+      overlay.style.opacity = '0';
+  }, 300);
+}
