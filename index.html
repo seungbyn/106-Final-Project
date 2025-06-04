@@ -120,15 +120,26 @@
                 <div id="tooltip-estrous" class="tooltip" style="position: absolute; opacity: 0;"></div>
             </div>
         </section>
-        <section class="ten" data-bgcolor="white">
-            <!-- TODO styling. this page looks like a Hello World project -->
+        <!--<section class="ten" data-bgcolor="white">
+            TODO styling. this page looks like a Hello World project
             <div class="txts" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
                 <h1 class="animated-txt">
                     98.6ºF (37ºC) is a healthy human body temperature.<br>
                     The mouse equivalent is <span id="mouse-temp-placeholder">98.4ºF (36.95ºC)</span>!
                 </h1>
                 <iframe src="data/mouse_activity_chart.html" width="80%" height="500" frameborder="0" style="margin-top: 2em;"></iframe>
+                <div id="mouse-temp-chart" style="margin-top:2em;"></div>
             </div>
+        </section>-->
+        <section class="ten" data-bgcolor="white">
+        <div class="txts" style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 4em 2em;">
+            <h1 class="animated-txt" style="font-size: 2rem; max-width: 900px;">
+            98.6ºF (37ºC) is a healthy human body temperature.<br>
+            The mouse equivalent is <span id="mouse-temp-placeholder">98.4ºF (36.95ºC)</span>!
+            </h1>
+            
+            <div id="mouse-temp-chart" class="chart-container fade-in-section" style="width: 100%; max-width: 2400px; min-height: 800px; margin-top: 3em;"></div>
+        </div>
         </section>
 
         <section class="eleven">
@@ -177,6 +188,7 @@
     </div>
 
     <script src="index.js"></script>
+    <script src="mouse_temp_chart.js"></script>
     <script type="module">
         import { renderTemperaturePlot } from './interactiveVisPlot.js';
 
@@ -189,6 +201,24 @@
             '#tooltip-estrous'
         );
     </script>
+    <script>
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in-visible');
+            observer.unobserve(entry.target); // Animate only once
+            }
+        });
+        },
+        { threshold: 0.1 }
+    );
+
+    document.querySelectorAll('.fade-in-section').forEach(el => {
+        observer.observe(el);
+    });
+    </script>
+    
 </body>
 
 </html>

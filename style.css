@@ -695,3 +695,77 @@ input[type="checkbox"]:focus {
   opacity: 1;
 }
  /*demo vide */
+
+
+ /* for slide 10*/
+ body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.section-temperature {
+  background-color: #f9f9f9;
+  padding: 6em 2em;
+}
+.temperature-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.temperature-heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #333;
+  max-width: 900px;
+}
+
+.pulse-highlight {
+  color: #007acc;
+  animation: pulseFade 2s infinite ease-in-out;
+  font-weight: 600;
+}
+
+@keyframes pulseFade {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .temperature-heading {
+    font-size: 1.6rem;
+  }
+
+  .chart-container {
+    padding: 1.5em;
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .temperature-heading {
+    font-size: 1.4rem;
+  }
+
+  .section-temperature {
+    padding: 4em 1em;
+  }
+}
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When visible */
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* end slide 10 */
