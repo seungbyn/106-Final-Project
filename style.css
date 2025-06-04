@@ -818,5 +818,35 @@ section.five {
     position: absolute;
     top: 20px;
   }
-
 }
+
+/* styling for emoji slide*/
+  .bubble-title {
+    display: inline-block;
+    position: relative;
+    background: #4aa56d7a;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(61, 84, 48, 0.1);
+    margin: 20px 0;
+  }
+
+  /* Optional animation */
+  .bubble-title {
+    animation: floatUp 0.5s ease-out;
+  }
+
+  @keyframes floatUp {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
