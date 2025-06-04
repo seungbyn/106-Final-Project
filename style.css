@@ -140,7 +140,7 @@ section {
 }
 
 #off1 {
-  color: rgb(81, 81, 81);
+  color: rgb(154, 154, 154);
   text-shadow: 1px 1px 2px #ffffff;
   font-size: 40px;
 }
@@ -854,19 +854,71 @@ section.five {
     box-shadow: 0 3px 6px rgba(61, 84, 48, 0.1);
     margin: 20px 0;
   }
+/* text styling */
+.pink-drop-shadow {
+  text-shadow: 2px 2px 0 #ffb6c1; /* Light pink shadow */
+  font-weight: 600; /* Slightly bold */
+  color: #000000; 
+}
 
-  /* Optional animation */
-  .bubble-title {
-    animation: floatUp 0.5s ease-out;
+  .try-again {
+    /* Text styling */
+    color: #b33a3a; /* Dark red text */
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    /* Background and border */
+    background-color: #fff3cd; /* Light yellow background */
+    border: 2px solid #ffc107; /* Amber border */
+    border-radius: 4px;
+    
+    /* Spacing and layout */
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    
+    /* Classic warning triangle icon */
+    position: relative;
+    padding-left: 40px;
+  }
+  
+  /* Optional warning icon */
+  .try-again::before {
+    content: "⚠";
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    color: #dc3545;
+  }
+  
+  /* Hover effect */
+  .try-again:hover {
+    background-color: #ffe8a1;
+    box-shadow: 0 0 8px rgba(255, 193, 7, 0.3);
   }
 
-  @keyframes floatUp {
-    from {
-      transform: translateY(10px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
+/* hover annotation */
+.annotation {
+  position: absolute;
+  background: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+/* Show annotations only when hovering the image */
+.annotated-chart:hover img + .annotation,
+.annotated-chart:hover img ~ .annotation {
+  opacity: 1;
+  transform: scale(1);
+}
