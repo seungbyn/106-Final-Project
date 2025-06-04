@@ -695,6 +695,7 @@ input[type="checkbox"]:focus {
   opacity: 1;
 }
  /*demo vide */
+ /* slide 10*/
  .fade-in-section {
   opacity: 0;
   transform: translateY(40px);
@@ -767,6 +768,18 @@ section.five {
   visibility: visible;
   opacity: 1;
 }
+/* slide 10 end*/
+
+/*slide 0*/
+.zero {
+  padding-left: 20%;       /* push everything right a bit */
+  padding-right: 0%;       /* keep some space on right */
+  gap: 1em;
+}
+/*end slide 0*/
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 
 .twelve {
   background-color: #c3c3c3;
