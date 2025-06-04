@@ -387,13 +387,13 @@ document.getElementById("timeRange").addEventListener("input", updateChart);
 document.getElementById("timeMode").addEventListener("change", updateChart);
 
 // emoji
-// document.getElementById('sun-button').addEventListener('click', function() {
-//   flashScreen('red');
-// });
+document.getElementById('sun-button').addEventListener('click', function() {
+  flashScreen('red');
+});
 
-// document.getElementById('moon-button').addEventListener('click', function() {
-//   flashScreen('green');
-// });
+document.getElementById('moon-button').addEventListener('click', function() {
+  flashScreen('green');
+});
 
 document.getElementById('sun-button').addEventListener('click', function () {
   document.querySelector('.three').scrollIntoView({ behavior: 'smooth' });
@@ -418,3 +418,20 @@ function flashScreen(color) {
       overlay.style.opacity = '0';
   }, 300);
 }
+
+// conclusion mouse visualization
+document.getElementById('healthy1').addEventListener('click', function() {
+  flashScreen('green');
+});
+document.getElementById('healthy2').addEventListener('click', function() {
+  flashScreen('green');
+});
+document.getElementById('sick1').addEventListener('click', function() {
+  flashScreen('red');
+});
+document.getElementById('sick2').addEventListener('click', function() {
+  flashScreen('red');
+});
+document.getElementById('sick3').addEventListener('click', function() {
+  flashScreen('red');
+});

@@ -2,29 +2,29 @@
 
 /* progress bar container */
 #progress-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 6px;
-    background: #eee;
-    z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: #eee;
+  z-index: 9999;
 }
 
 /* actual progress bar */
 #progress-bar {
-    height: 100%;
-    width: 0%;
-    background: #56585b;
-    transition: width 0.1s ease-out;
+  height: 100%;
+  width: 0%;
+  background: #56585b;
+  transition: width 0.1s ease-out;
 }
 
 /* entire website styling */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Playfair Display", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", sans-serif;
 }
 
 body {
@@ -52,28 +52,29 @@ h2 {
 }
 
 .scrollDown {
-  color:rgba(0, 0, 0, 0.575);
+  color: rgba(0, 0, 0, 0.575);
   font-size: 12px;
-  padding-top : 40px;
+  padding-top: 40px;
   position: relative;
   bottom: 10px;
 }
 
-.container{
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-    scroll-behavior: smooth;
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-behavior: smooth;
 }
 
 section {
-    position: relative;
-    height: 100ch;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-align: start;
+  position: relative;
+  height: 100ch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
 }
+
 .one {
   background-color: #ddd;
 }
@@ -128,9 +129,9 @@ section {
   /* animation-delay: 1.5s, 1s; */
   font-size: 30px;
   /* add drop shadow for text */
-  text-shadow: 0 0 10px rgba(220, 208, 140, 0.5), 
-               0 0 20px rgba(118, 117, 62, 0.5), 
-               0 0 30px rgba(167, 161, 165, 0.3);
+  text-shadow: 0 0 10px rgba(220, 208, 140, 0.5),
+    0 0 20px rgba(118, 117, 62, 0.5),
+    0 0 30px rgba(167, 161, 165, 0.3);
 }
 
 #on1 {
@@ -144,36 +145,89 @@ section {
 }
 
 @keyframes fadeIn {
-  from {opacity: 0; }
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes flicker {
+
   0%,
-  100% {opacity: 1;}
-  2% {opacity: 0.8;}
-  4% {opacity: 0.6;}
-  6% {opacity: 0.9;}
-  8% { opacity: 0.3;}
-  10% { opacity: 1;}
-  12% {opacity: 0.2;}
-  14% {opacity: 0.7;}
-  16% {opacity: 1;}
-  18% { opacity: 0.5;}
-  20% {opacity: 1;}
-  90% {opacity: 1;}
-  92% {opacity: 0.8;}
-  94% {opacity: 0.5;}
-  96% {opacity: 0.2;}
-  98% {opacity: 0.7;}
+  100% {
+    opacity: 1;
+  }
+
+  2% {
+    opacity: 0.8;
+  }
+
+  4% {
+    opacity: 0.6;
+  }
+
+  6% {
+    opacity: 0.9;
+  }
+
+  8% {
+    opacity: 0.3;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 0.2;
+  }
+
+  14% {
+    opacity: 0.7;
+  }
+
+  16% {
+    opacity: 1;
+  }
+
+  18% {
+    opacity: 0.5;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  92% {
+    opacity: 0.8;
+  }
+
+  94% {
+    opacity: 0.5;
+  }
+
+  96% {
+    opacity: 0.2;
+  }
+
+  98% {
+    opacity: 0.7;
+  }
 }
 
 .two {
-  background-color:rgb(0, 0, 0)
+  background-color: rgb(0, 0, 0)
 }
 
 .three {
-  background: #ffffff; 
+  background: #ffffff;
 }
 
 .instructions {
@@ -194,7 +248,7 @@ section {
   width: 24px;
   height: 24px;
   color: rgb(18, 17, 17);
-  text-shadow:rgba(58, 56, 56, 0.75)  1px 1px 1px;
+  text-shadow: rgba(58, 56, 56, 0.75) 1px 1px 1px;
   border-radius: 50%;
   font-weight: bold;
   font-size: 0.9rem;
@@ -227,15 +281,38 @@ section {
 }
 
 @keyframes light-flicker {
-  0%, 100% { opacity: 1; }
-  20%, 60% { opacity: 0.8; }
-  40%, 80% { opacity: 0.6; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  20%,
+  60% {
+    opacity: 0.8;
+  }
+
+  40%,
+  80% {
+    opacity: 0.6;
+  }
 }
 
 @keyframes dark-flicker {
-  0%, 100% { opacity: 1; }
-  30%, 70% { opacity: 0.7; }
-  50% { opacity: 0.4; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  30%,
+  70% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
 }
 
 .four {
@@ -245,25 +322,25 @@ section {
 /*testing*/
 /* Base box styling */
 .box {
-    position: absolute;
-    width: 200px;
-    height: 120px;
-    /* border: 2px dashed white; */
-    /* background-color: rgba(255, 255, 255, 0.05); faint fill */
-    /* box-shadow: 0 0 4px rgba(255, 255, 255, 0.2); */
+  position: absolute;
+  width: 200px;
+  height: 120px;
+  /* border: 2px dashed white; */
+  /* background-color: rgba(255, 255, 255, 0.05); faint fill */
+  /* box-shadow: 0 0 4px rgba(255, 255, 255, 0.2); */
 }
 
 /* Manually positioned boxes */
 #box-one-a {
-    width: 80%;
-    height: 80%;
-    top: 100px;
-    left: 100px;
+  width: 80%;
+  height: 80%;
+  top: 100px;
+  left: 100px;
 }
 
 #box-one-b {
-    top: 250px;
-    left: 300px;
+  top: 250px;
+  left: 300px;
 }
 
 /* visualization styling */
@@ -294,7 +371,8 @@ section {
   gap: 8px;
 }
 
-select, input {
+select,
+input {
   background-color: white;
   font-size: 14px;
   border-radius: 8px;
@@ -302,7 +380,8 @@ select, input {
   border: 1px solid #ccc;
 }
 
-select:focus, input:focus {
+select:focus,
+input:focus {
   border-color: #3498db;
   outline: none;
 }
@@ -324,7 +403,9 @@ input[type="checkbox"]:checked {
   padding: 6px;
 }
 
-.controls label, .controls select, .controls input {
+.controls label,
+.controls select,
+.controls input {
   margin: 5px;
 }
 
@@ -411,23 +492,30 @@ svg {
 }
 
 input[type="checkbox"] {
-  width: 24px; /* Set a fixed width */
-  height: 24px; /* Set a fixed height to make it square */
-  border-radius: 4px; /* Slightly rounded edges */
+  width: 24px;
+  /* Set a fixed width */
+  height: 24px;
+  /* Set a fixed height to make it square */
+  border-radius: 4px;
+  /* Slightly rounded edges */
   background-color: white;
   border: 2px solid #ccc;
-  appearance: none; /* Remove default styles */
+  appearance: none;
+  /* Remove default styles */
   position: relative;
   transition: all 0.2s ease;
 }
 
 input[type="checkbox"]:checked {
-  background-color: #3498db; /* Blue background when checked */
-  border-color: #3498db; /* Blue border when checked */
+  background-color: #3498db;
+  /* Blue background when checked */
+  border-color: #3498db;
+  /* Blue border when checked */
 }
 
 input[type="checkbox"]:checked::after {
-  content: "✔"; /* Add check mark when checked */
+  content: "✔";
+  /* Add check mark when checked */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -438,7 +526,8 @@ input[type="checkbox"]:checked::after {
 
 input[type="checkbox"]:focus {
   outline: none;
-  border-color: #2980b9; /* Highlight on focus */
+  border-color: #2980b9;
+  /* Highlight on focus */
 }
 
 .controls label {
@@ -546,42 +635,42 @@ input[type="checkbox"]:focus {
     padding: 2rem;
     color: #333;
   }
-  
+
   .highlight {
     color: #4a6fa5;
     font-weight: bold;
   }
-  
+
   .evidence-chart {
     background: #f9f9f9;
     border-radius: 10px;
     padding: 20px;
     margin: 2rem 0;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
+
   .chart-instructions {
     margin-bottom: 1.5rem;
   }
-  
+
   .key-findings {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     margin: 2rem 0;
   }
-  
+
   .finding-card {
     background: white;
     padding: 1.5rem;
     border-radius: 8px;
   }
-  
+
   .data-point {
     font-weight: bold;
     color: #4a6fa5;
   }
-  
+
   .final-thought {
     background: #4a6fa5;
     color: white;
@@ -589,7 +678,7 @@ input[type="checkbox"]:focus {
     border-radius: 10px;
     margin-top: 2rem;
   }
-  }
+}
 
 /* estrous cycle chart styling */
 #estrous-chart-container text {
@@ -605,7 +694,8 @@ input[type="checkbox"]:focus {
   margin-bottom: 20px;
 }
 
-.chart-narrative, .chart-summary {
+.chart-narrative,
+.chart-summary {
   max-width: 800px;
   margin: 0 auto 20px;
   font-family: "Playfair Display";
@@ -624,7 +714,8 @@ input[type="checkbox"]:focus {
   margin-bottom: 20px;
 }
 
-.chart-narrative, .chart-summary {
+.chart-narrative,
+.chart-summary {
   max-width: 800px;
   margin: 0 auto 20px;
   font-family: "Playfair Display";
@@ -633,10 +724,13 @@ input[type="checkbox"]:focus {
   color: black;
   text-align: center;
 }
+
 #stats-estrous {
-  display: none; /* hidden by default */
+  display: none;
+  /* hidden by default */
   max-width: fit-content;
-  margin: 20px auto 0; /* centers it */
+  margin: 20px auto 0;
+  /* centers it */
   padding: 10px 16px;
   background-color: #f5f5f5;
   border: 1px solid #ccc;
@@ -644,11 +738,11 @@ input[type="checkbox"]:focus {
   font-size: 16px;
   font-family: "Playfair Display", sans-serif;
   color: black;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-/* hover tool tip */ 
+/* hover tool tip */
 .insight-hover-area {
   position: relative;
   display: inline-block;
@@ -671,26 +765,83 @@ input[type="checkbox"]:focus {
 .hidden-insight {
   visibility: hidden;
   opacity: 0;
-  max-width: 600px;              /* wider box */
+  max-width: 600px;
+  /* wider box */
   background-color: #f9f9f9;
   color: #333;
   text-align: center;
-  padding: 10px 18px;            /* less vertical padding */
+  padding: 10px 18px;
+  /* less vertical padding */
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   position: absolute;
   top: 130%;
   left: 50%;
   transform: translateX(-50%);
   transition: opacity 0.4s ease, visibility 0.4s ease;
   font-size: 0.95em;
-  line-height: 1.3;              /* slightly tighter line spacing */
+  line-height: 1.3;
+  /* slightly tighter line spacing */
   z-index: 10;
-  white-space: normal;           /* ensures text wraps naturally */
+  white-space: normal;
+  /* ensures text wraps naturally */
 }
 
 
 .insight-hover-area:hover .hidden-insight {
   visibility: visible;
   opacity: 1;
+}
+
+.twelve {
+  background-color: #c3c3c3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .mouse-timeline {
+    display: flex;
+    width: 80%;
+    max-width: 800px;
+    margin: 2rem auto;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #252525;
+    z-index: 1;
+  }
+
+  .timeline-tick {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-marker {
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 3px solid #252525;
+    border-radius: 50%;
+  }
+
+  .timeline-label {
+    font-size: 0.9rem;
+    color: #555;
+    white-space: nowrap;
+    position: absolute;
+    top: 20px;
+  }
+
 }
