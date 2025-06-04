@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
 // tempBySexChart.js
+=======
+>>>>>>> Stashed changes
 (async () => {
   // Load CSV data
   const femaleTemp = await d3.csv("data/FemTemp.csv");
@@ -88,4 +91,8 @@
     .style("font-size", "22px")
     .style("font-weight", "bold")
     .text("Average Mouse Body Temperature by Sex");
+<<<<<<< Updated upstream
 })();
+=======
+})();
+>>>>>>> Stashed changes
