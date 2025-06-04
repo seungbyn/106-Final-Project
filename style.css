@@ -780,3 +780,56 @@ section.five {
 }
 /*end slide 0*/
 >>>>>>> Stashed changes
+
+.twelve {
+  background-color: #c3c3c3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .mouse-timeline {
+    display: flex;
+    width: 80%;
+    max-width: 800px;
+    margin: 2rem auto;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #252525;
+    z-index: 1;
+  }
+
+  .timeline-tick {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-marker {
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 3px solid #252525;
+    border-radius: 50%;
+  }
+
+  .timeline-label {
+    font-size: 0.9rem;
+    color: #555;
+    white-space: nowrap;
+    position: absolute;
+    top: 20px;
+  }
+
+}
