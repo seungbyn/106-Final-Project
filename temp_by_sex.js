@@ -18,11 +18,15 @@
         height = 600;
 
   const svg = d3.select("#temp-by-sex-chart")
+    .style("display", "flex")
+    .style("justify-content", "center")
+    .style("align-items", "center")
     .append("svg")
     .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
     .attr("preserveAspectRatio", "xMidYMid meet")
     .style("font-family", "'Inter', 'Roboto', sans-serif")
     .style("width", "100%")
+    .style("max-width", `${width + margin.left + margin.right}px`)
     .style("height", "auto")
     .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
@@ -32,12 +36,13 @@
     .range([0, width])
     .padding(0.4);
 
-  const yMin = d3.min(data, d => d.temp) - 0.05;
-  const yMax = d3.max(data, d => d.temp) + 0.05;
+  const yMin = d3.min(data, d => d.temp) - 0.15;
+  const yMax = d3.max(data, d => d.temp) + 0.15;
   const y = d3.scaleLinear().domain([yMin, yMax]).nice().range([height, 0]);
 
   const colorMap = { Female: "#f06292", Male: "#64b5f6" };
 
+  // Tooltip
   const tooltip = d3.select("#temp-by-sex-chart")
     .append("div")
     .attr("class", "tooltip")
@@ -75,17 +80,20 @@
       d3.select(this).attr("fill", colorMap[d.sex]);
     });
 
+  // X Axis
   svg.append("g")
     .attr("transform", `translate(0,${height})`)
     .call(d3.axisBottom(x))
     .selectAll("text")
     .style("font-size", "20px");
 
+  // Y Axis
   svg.append("g")
     .call(d3.axisLeft(y).ticks(6))
     .selectAll("text")
     .style("font-size", "20px");
 
+  // X Axis Label
   svg.append("text")
     .attr("x", width / 2)
     .attr("y", height + 70)
@@ -93,6 +101,7 @@
     .style("font-size", "20px")
     .text("Mouse Sex");
 
+  // Y Axis Label
   svg.append("text")
     .attr("transform", "rotate(-90)")
     .attr("x", -height / 2)
@@ -101,6 +110,7 @@
     .style("font-size", "20px")
     .text("Avg Temperature (°C)");
 
+  // Title
   svg.append("text")
     .attr("x", width / 2)
     .attr("y", -40)
