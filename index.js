@@ -378,7 +378,7 @@ function updateChart() {
 
 //const instruction for changes
 const instructionsDay = `
-<h1>Try again! What do you see for activity levels in <bdi id="on2">light</bdi> vs. <bdi id="off2">dark</bdi> cycles?</h1>
+<h1 class="try-again">Try again!</h1><h1>What do you see for activity levels in <bdi id="on2">light</bdi> vs. <bdi id="off2">dark</bdi> cycles?</h1>
 <h2>Follow instructions below:</h2>
 <p><bdi class="step-n">1</bdi>Switch <bdi class="button-like">Time Mode</bdi> to <b>Minutes</b></p>
 <p><bdi class="step-n">2</bdi>Switch <bdi class="button-like">Data Type</bdi> to <b>Activity</b></p>

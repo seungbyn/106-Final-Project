@@ -849,8 +849,49 @@ section.five {
 .pink-drop-shadow {
   text-shadow: 2px 2px 0 #ffb6c1; /* Light pink shadow */
   font-weight: 600; /* Slightly bold */
-  color: #000000; /* Dark gray text */
+  color: #000000; 
 }
+
+  .try-again {
+    /* Text styling */
+    color: #b33a3a; /* Dark red text */
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    /* Background and border */
+    background-color: #fff3cd; /* Light yellow background */
+    border: 2px solid #ffc107; /* Amber border */
+    border-radius: 4px;
+    
+    /* Spacing and layout */
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    
+    /* Classic warning triangle icon */
+    position: relative;
+    padding-left: 40px;
+  }
+  
+  /* Optional warning icon */
+  .try-again::before {
+    content: "⚠";
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    color: #dc3545;
+  }
+  
+  /* Hover effect */
+  .try-again:hover {
+    background-color: #ffe8a1;
+    box-shadow: 0 0 8px rgba(255, 193, 7, 0.3);
+  }
 
 /* hover annotation */
 .annotation {
