@@ -707,7 +707,6 @@ input[type="checkbox"]:focus {
   opacity: 1;
   transform: translateY(0);
 }
-<<<<<<< Updated upstream
 /* section five */
 section.five {
   display: flex;
@@ -769,7 +768,6 @@ section.five {
   visibility: visible;
   opacity: 1;
 }
-=======
 /* slide 10 end*/
 
 /*slide 0*/
@@ -779,6 +777,7 @@ section.five {
   gap: 1em;
 }
 /*end slide 0*/
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 
 .twelve {
@@ -833,3 +832,5 @@ section.five {
   }
 
 }
+=======
+>>>>>>> Stashed changes
