@@ -107,6 +107,7 @@ section {
 
 .one #data-description {
   padding-bottom: 10px;
+  font-size: 35px;
 }
 
 .animated-txt {
@@ -141,6 +142,7 @@ section {
 #off1 {
   color: rgb(81, 81, 81);
   text-shadow: 1px 1px 2px #ffffff;
+  font-size: 40px;
 }
 
 @keyframes fadeIn {
