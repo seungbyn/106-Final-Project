@@ -706,3 +706,64 @@ input[type="checkbox"]:focus {
   opacity: 1;
   transform: translateY(0);
 }
+/* section five */
+section.five {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.slide-text {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.annotated-chart {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.annotated-chart img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+.annotation {
+  position: absolute;
+  background: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.reveal-on-hover {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #333;
+  position: relative;
+}
+
+.hover-info {
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #666;
+  transition: opacity 0.3s ease;
+}
+
+.reveal-on-hover:hover .hover-info {
+  visibility: visible;
+  opacity: 1;
+}
