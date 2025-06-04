@@ -851,3 +851,25 @@ section.five {
   font-weight: 600; /* Slightly bold */
   color: #000000; /* Dark gray text */
 }
+
+/* hover annotation */
+.annotation {
+  position: absolute;
+  background: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+/* Show annotations only when hovering the image */
+.annotated-chart:hover img + .annotation,
+.annotated-chart:hover img ~ .annotation {
+  opacity: 1;
+  transform: scale(1);
+}
