@@ -444,3 +444,20 @@ function flashScreen(color) {
       overlay.style.opacity = '0';
   }, 300);
 }
+
+// conclusion mouse visualization
+document.getElementById('healthy1').addEventListener('click', function() {
+  flashScreen('green');
+});
+document.getElementById('healthy2').addEventListener('click', function() {
+  flashScreen('green');
+});
+document.getElementById('sick1').addEventListener('click', function() {
+  flashScreen('red');
+});
+document.getElementById('sick2').addEventListener('click', function() {
+  flashScreen('red');
+});
+document.getElementById('sick3').addEventListener('click', function() {
+  flashScreen('red');
+});
