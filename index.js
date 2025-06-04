@@ -376,6 +376,16 @@ function updateChart() {
     svg.call(zoom);
 }
 
+//const instruction for changes
+const instructionsDay = `
+<h1>Try again! What do you see for activity levels in <bdi id="on2">light</bdi> vs. <bdi id="off2">dark</bdi> cycles?</h1>
+<h2>Follow instructions below:</h2>
+<p><bdi class="step-n">1</bdi>Switch <bdi class="button-like">Time Mode</bdi> to <b>Minutes</b></p>
+<p><bdi class="step-n">2</bdi>Switch <bdi class="button-like">Data Type</bdi> to <b>Activity</b></p>
+<p><bdi class="step-n">3</bdi>Enter <bdi class="button-like">Time Range</bdi> as <b>0-1440</b> (1440 mins = 24 hrs = 1 day)</p>
+<p><bdi class="step-n">4</bdi>What do you notice? Look at the shaded regions.</p>
+`;
+
 // Event listeners
 document.getElementById("toggleMale").addEventListener("change", updateChart);
 document.getElementById("toggleFemale").addEventListener("change", updateChart);
@@ -386,14 +396,13 @@ document.getElementById("dataType").addEventListener("change", function () {
 document.getElementById("timeRange").addEventListener("input", updateChart);
 document.getElementById("timeMode").addEventListener("change", updateChart);
 
-// emoji
-// document.getElementById('sun-button').addEventListener('click', function() {
-//   flashScreen('red');
-// });
+document.getElementById('sun-button').addEventListener('click', function() {
+  flashScreen('red');
+});
 
-// document.getElementById('moon-button').addEventListener('click', function() {
-//   flashScreen('green');
-// });
+document.getElementById('moon-button').addEventListener('click', function() {
+  flashScreen('green');
+});
 
 document.getElementById('sun-button').addEventListener('click', function () {
   document.querySelector('.three').scrollIntoView({ behavior: 'smooth' });
@@ -402,6 +411,23 @@ document.getElementById('sun-button').addEventListener('click', function () {
 document.getElementById('moon-button').addEventListener('click', function () {
   document.querySelector('.five').scrollIntoView({ behavior: 'smooth' });
 });
+
+  document.getElementById('sun-button').addEventListener('click', () => {
+    document.getElementById('vis-instructions').innerHTML = instructionsDay;
+  });
+
+  document.getElementById('moon-button').addEventListener('click', () => {
+  const summary = document.getElementById('nocturnal-summary');
+
+  summary.innerHTML = `
+    <h1>✅ Mice are nocturnal!</h1>
+    <p>Based on the visualization, mice show more activity and higher body temperature during the dark periods.</p>
+    <p>This pattern suggests they are adapted to be more active at night — sleeping during the day and foraging at night.</p>
+  `;
+
+  document.getElementById('slide-five').scrollIntoView({ behavior: 'smooth' });
+});
+
 
 function flashScreen(color) {
   const overlay = document.getElementById('flash-overlay');

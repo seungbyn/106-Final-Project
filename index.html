@@ -40,60 +40,62 @@
 
         <section class="three">
             <div class="box" id="box-one-a">
-                <div class="instructions">
-                    <h1>How do mice react to <bdi id="on2">light</bdi> vs. <bdi id="off2">dark</bdi> cycles?</h1>
-                    <h2>Follow instructions below:</h2>
-                    <p><bdi class="step-n">1</bdi>Switch <bdi class="button-like">Time Mode</bdi> to <b>Minutes</b></p>
-                    <p><bdi class="step-n">2</bdi>Switch <bdi class="button-like">Data Type</bdi> to <b>Activity</b></p>
-                    <p><bdi class="step-n">3</bdi>Enter <bdi class="button-like">Time Range</bdi> as <b>0-1440</b> (1440 mins = 24 hrs = 1 day)</p>
-                    <p><bdi class="step-n">4</bdi>What do you notice? Look at the shaded regions.<p>
+                <div class="instructions" id="vis-instructions">
+                <h1>How do mice react to <bdi id="on2">light</bdi> vs. <bdi id="off2">dark</bdi> cycles?</h1>
+                <h2>Follow instructions below:</h2>
+                <p><bdi class="step-n">1</bdi>Switch <bdi class="button-like">Time Mode</bdi> to <b>Minutes</b></p>
+                <p><bdi class="step-n">2</bdi>Switch <bdi class="button-like">Data Type</bdi> to <b>Activity</b></p>
+                <p><bdi class="step-n">3</bdi>Enter <bdi class="button-like">Time Range</bdi> as <b>0-1440</b> (1440 mins = 24 hrs = 1 day)</p>
+                <p><bdi class="step-n">4</bdi>What do you notice? Look at the shaded regions.</p>
                 </div>
                 <hr>
                 <div class="controls">
-                    <div class="control-group">
-                        <label><input type="checkbox" id="toggleMale" checked> Show Males</label>
-                        <label><input type="checkbox" id="toggleFemale" checked> Show Females</label>
-                    </div>
-                    <div class="control-group">
-                        <label for="dataType">Data Type:</label>
-                        <select id="dataType">
-                            <option value="temp">Temperature</option>
-                            <option value="act">Activity</option>
-                        </select>
-                    </div>
+                <div class="control-group">
+                    <label><input type="checkbox" id="toggleMale" checked> Show Males</label>
+                    <label><input type="checkbox" id="toggleFemale" checked> Show Females</label>
+                </div>
+                <div class="control-group">
+                    <label for="dataType">Data Type:</label>
+                    <select id="dataType">
+                    <option value="temp">Temperature</option>
+                    <option value="act">Activity</option>
+                    </select>
+                </div>
                 </div>
 
                 <div class="controls-row-2">
-                    <div class="control-group">
-                        <label for="timeMode">Time Mode:</label>
-                        <select id="timeMode">
-                            <option value="day">Day</option>
-                            <option value="sec">Minutes</option>
-                        </select>
-                    </div>
-                    <div class="control-group">
-                        <label for="timeRange">Time Range (Minutes):</label>
-                        <input type="text" id="timeRange" placeholder="e.g. 0-1440">
-                    </div>
+                <div class="control-group">
+                    <label for="timeMode">Time Mode:</label>
+                    <select id="timeMode">
+                    <option value="day">Day</option>
+                    <option value="sec">Minutes</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="timeRange">Time Range (Minutes):</label>
+                    <input type="text" id="timeRange" placeholder="e.g. 0-1440">
+                </div>
                 </div>
 
                 <div class="chart-container">
-                    <svg class="chart" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet"></svg>
+                <svg class="chart" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet"></svg>
                 </div>
             </div>
         </section>
 
         <section class="four">
+            <h1>Quiz Question : Are mice nocturnal or <span class="vocab-word">diurnal<span class="thought-bubble">diurnal: of animals, active in the daytime <br> (vocab word of the day!)</span></span>?</h1>
             <div id="flash-overlay"></div>
             <div class="emoji-buttons">
                 <span id="moon-button" class="emoji">🌙</span>
                 <span id="sun-button" class="emoji">🌞</span>
             </div>
-            <h1>Are mice nocturnal or <span class="vocab-word">diurnal<span class="thought-bubble">diurnal: of animals, active in the daytime <br> (vocab word of the day!)</span></span>?</h1>
         </section>
 
         <section class="five">
-            <!-- TODO mimic section three but with different instructions to inspect diff btwn male and female temps -->
+            <div class="slide-text" id="nocturnal-summary">
+                <!--populated by JS-->
+            </div>
         </section>
 
         <section class="six">
