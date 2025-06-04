@@ -833,7 +833,7 @@ section.five {
   .bubble-title {
     display: inline-block;
     position: relative;
-    background: #4aa56d7a;
+    background: #18253e7a;
     color: white;
     padding: 12px 20px;
     border-radius: 20px;
@@ -843,19 +843,9 @@ section.five {
     box-shadow: 0 3px 6px rgba(61, 84, 48, 0.1);
     margin: 20px 0;
   }
-
-  /* Optional animation */
-  .bubble-title {
-    animation: floatUp 0.5s ease-out;
-  }
-
-  @keyframes floatUp {
-    from {
-      transform: translateY(10px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
+/* text styling */
+.pink-drop-shadow {
+  text-shadow: 2px 2px 0 #ffb6c1; /* Light pink shadow */
+  font-weight: 600; /* Slightly bold */
+  color: #000000; /* Dark gray text */
+}
