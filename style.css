@@ -31,50 +31,6 @@ body {
   transition: background-color 0.5s ease;
 }
 
-/* intro blurb styling */
-.intro-blurb {
-  font-size: 1.25rem;
-  line-height: 1.8;
-  max-width: 50rem;
-  margin: 1.5rem auto;
-  text-align: center;
-}
-
-.central-question {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-top: 2rem;
-  color: #222;
-  text-align: center;
-  font-style: italic;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.08);
-    opacity: 0.85;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.centered-temp {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #d62828;
-  text-align: center;
-  margin: 1.5rem 0;
-  font-family: 'Playfair Display', sans-serif;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-/* intro blurb stylign end */
 
 h2 {
   font-size: 10px;
@@ -130,6 +86,129 @@ section {
   animation: fadeIn 2s ease-in forwards;
 
 }
+
+
+/*slide 0 intro blurb styling */
+.intro-blurb {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  max-width: 50rem;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+.central-question {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  color: #222;
+  text-align: center;
+  font-style: italic;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.centered-temp {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #d62828;
+  text-align: center;
+  margin: 1.5rem 0;
+  font-family: 'Playfair Display', sans-serif;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* intro blurb stylign end */
+
+/* -------------------------------
+   Slide 1 Styling: Base Themes
+-------------------------------- */
+.one {
+  transition: background-color 1.5s ease-in-out;
+}
+
+.one.dark-bg,
+.dark-bg {
+  background-color: #000;
+  color: white;
+  transition: background-color 1.2s ease, color 1.2s ease;
+}
+
+.one.light-bg,
+.light-bg {
+  background-color: #fefefe;
+  color: #111;
+}
+
+/* -------------------------------
+   Text Visibility Transitions
+-------------------------------- */
+#light-content.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+}
+
+#light-content.visible,
+.fade-in.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1.5s ease-in;
+}
+
+/* -------------------------------
+   Element-Specific Styling
+-------------------------------- */
+.one .txts > * {
+  margin-top: 1.2em;
+}
+
+#data-link {
+  display: inline-block;
+  max-width: 150px;
+  padding: 8px 12px;
+  font-weight: 600;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+}
+
+/* -------------------------------
+   Interactive Elements
+-------------------------------- */
+.clickable {
+  cursor: pointer;
+  text-decoration: underline dotted;
+  font-style: italic;
+}
+
+.lights {
+  cursor: pointer;
+  transition: text-shadow 0.4s ease;
+}
+
+.lights:hover {
+  text-shadow: 0 0 10px #fdd835, 0 0 20px #fdd835;
+}
+/* slide 1 styling end */
 
 .one #data-link {
   font-size: 20px;
@@ -215,9 +294,69 @@ section {
   98% {opacity: 0.7;}
 }
 
+/* slide 2 styling start */
 .two {
-  background-color:rgb(0, 0, 0)
+  transition: background-color 1.2s ease, color 1.2s ease;
+  padding: 3rem;
+  text-align: center;
 }
+
+.two .txts {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#off1 {
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 700;
+  cursor: pointer;
+  color: black;  /* Start dark on light bg */
+  transition: color 1.2s ease, text-shadow 0.4s ease;
+}
+#off1:hover {
+  text-shadow: 0 0 10px #aaa, 0 0 25px #ddd;
+}
+
+#dark-content {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.2s ease;
+}
+
+#dark-content.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.two.dark-bg #off1 {
+  color: white;
+}
+
+.explore-btn {
+  display: block;
+  margin: 3em auto 0 auto;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.explore-btn:hover {
+  background-color: #444;
+  transform: translateY(-2px);
+}
+/* slide 2 styling end */
+
 
 .three {
   background: #ffffff; 

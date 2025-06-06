@@ -40,17 +40,26 @@
             <h3 class="scrollDown">*scroll down*</h3>
         </section>
 
-        <section class="one">
-            <!-- <h1>First Page</h1> -->
-            <div class = "txts">
-                <a id = "data-link" target="_blank" href = "https://docs.google.com/spreadsheets/d/1RXL_oUa1IYxnqfCW-9duz3M83wPlki4y/edit?gid=1872476945#gid=1872476945">Mouse Data:</a>
-                <p id = "data-description">To collect this data, every minute, the activity level and body temperature of healthy, male and female mice were collected for 2 weeks. Each day contained light and dark cycles.</p> 
-                <p class = "lights" id="on2">Lights were on for 12 hours</p>
-            </div>
+        <section class="one dark-bg">
+        <div class="txts">
+            <p class="lights fade-in" id="on2">What happens when the lights come on?</p>
+            <a id="data-link" class="fade-in" style="display:none;" target="_blank" href="https://docs.google.com/spreadsheets/d/1RXL_oUa1IYxnqfCW-9duz3M83wPlki4y/edit?gid=1872476945#gid=1872476945">Mouse Data!</a>
+            <p id="data-description" class="fade-in" style="display:none;">
+            To collect this data, every minute, the activity level and body temperature of healthy, male and female mice were collected for 2 weeks. Each day contained light and dark cycles.
+            </p>
+            <h1 class="fade-in" id="lights-text" style="display:none;">The lights were on for 12 hours.</h1>
+        </div>
         </section>
 
-        <section class="two">
-            <h1 class="lights" id="off1">Then, lights were off for 12 hours.</h1>
+        <section class="two light-bg">
+            <div class="txts">
+                <h1 class="clickable" id="off1">Then, lights were off for 12 hours.</h1>
+                <div id="dark-content">
+                <p>Without light, a different rhythm begins.</p>
+                <p>Activity patterns don’t vanish—they shift. But how exactly?</p>
+                <button id="scrollToThree" class="explore-btn">Click to explore below ↓</button>
+                </div>
+            </div>
         </section>
         <section class="three">
             <div class="box" id="box-one-a">
@@ -257,6 +266,7 @@
     <script src="index.js"></script>
     <script src="mouse_temp_chart.js"></script>
     <script src="temp_by_sex.js"></script>
+    <script src="lighbulb.js"></script>
     <script type="module">
         import { renderTemperaturePlot } from './interactiveVisPlot.js';
 
