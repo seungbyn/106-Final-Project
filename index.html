@@ -224,33 +224,58 @@
             <h1 class="animated-txt">A single temperature reading clearly does not tell the whole story in terms of mouse health.</h1>
         </section>
 
+
         <section class="eleven">
             <div class="conclusion-container">
                 <h1 class="animated-txt">Specifically...</h1>
 
-                <!-- Dropdown Selector -->
-                <div style="text-align: center; margin-top: 1.5em;">
-                <label for="chart-select"><strong>Choose a chart view:</strong></label>
-                <select id="chart-select" style="margin-left: 10px; padding: 6px 10px; font-size: 1rem;">
-                    <option value="box">Box & Whisker Plot</option>
-                    <option value="bar">Bar Plot</option>
-                </select>
+                <!-- Main Chart Type Toggles -->
+                <div id="chart-toggle">
+                    <label>
+                        <input type="checkbox" id="toggle-box" checked />
+                        Show Box & Whisker Plot
+                    </label>
+                    <label>
+                        <input type="checkbox" id="toggle-bar" />
+                        Show Bar Plot
+                    </label>
                 </div>
 
-                <div id="chart-containers" style="display: flex; justify-content: center; margin-top: 2em;">
-                <div id="boxplot-container" style="width: 600px; height: 550px;"></div>
-                <div id="temp-by-sex-chart" style="width: 600px; height: 500px; display: none;"></div>
+                <!-- Activity Toggle (only for boxplot) -->
+                <div id="toggle-container">
+                    <div class="activity-toggle-wrapper">
+                        <label>
+                            <input type="checkbox" id="toggle-data-type" />
+                            Compare by Activity (uncheck for Temperature)
+                        </label>
+                    </div>
                 </div>
 
-                <div class="key-findings" style="margin-top: 2em;">
-                <div class="finding-card">
-                    <h3>Mice are Nocturnal</h3>
-                    <p>Mice have higher body temperatures during night hours, reaching up to<span class="data-point"> 3°C</span> above daytime levels</p>
+                <!-- Chart Display Area -->
+                <div id="chart-containers">
+                    <div id="boxplot-container"></div>
+                    <div id="temp-by-sex-chart"></div>
                 </div>
-                <div class="finding-card">
-                    <h3>Females are Hotter ;)</h3>
-                    <p>Female mice show temperatures <span class="data-point">consistently higher</span> than males regardless of time of day</p>
-                </div>
+
+                <!-- Key Findings Section -->
+                <div class="key-findings">
+                    <div class="finding-card nocturnal">
+                        <h3>Mice are Nocturnal</h3>
+                        <p>
+                            Mice have higher body temperatures during night hours, reaching up to 
+                            <span class="data-point"> 3°C</span> 
+                            above daytime levels
+                        </p>
+                    </div>
+                    
+                    <div class="finding-card temperature">
+                        <h3>Females are Hotter ;)</h3>
+                        <p>
+                            Female mice show temperatures 
+                            <span class="data-point">consistently higher</span> 
+                            than males regardless of time of day
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>

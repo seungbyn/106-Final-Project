@@ -1098,6 +1098,159 @@ section.five {
   transform: scale(1);
 }
 
-#boxplot-container {
-  overflow: visible;
+/* slide 11 styling start*/
+#chart-toggle {
+    text-align: center;
+    margin-top: 1.5em;
 }
+
+#chart-toggle label {
+    margin-right: 1em;
+    font-weight: 500;
+    color: #444;
+}
+
+#chart-toggle input[type="checkbox"] {
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    accent-color: #667eea;
+}
+
+/* Activity Toggle */
+#toggle-container {
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    display: none;
+}
+
+.activity-toggle-wrapper {
+    background: rgba(255,255,255,0.8);
+    padding: 12px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.activity-toggle-wrapper label {
+    font-weight: 500;
+    color: #555;
+}
+
+.activity-toggle-wrapper input[type="checkbox"] {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    accent-color: #667eea;
+}
+
+/* Chart Containers */
+#chart-containers {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    align-items: flex-start;
+    margin-top: 2.5em;
+}
+
+#boxplot-container,
+#temp-by-sex-chart {
+    width: 600px;
+    height: 450px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#temp-by-sex-chart {
+    display: none;
+}
+
+/* Key Findings */
+.key-findings {
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2em;
+}
+
+.finding-card {
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.finding-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.finding-card.nocturnal {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    border-left: 5px solid #667eea;
+}
+
+.finding-card.temperature {
+    background: linear-gradient(135deg, rgba(240, 147, 251, 0.1), rgba(245, 87, 108, 0.1));
+    border-left: 5px solid #f093fb;
+}
+
+.finding-card h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.finding-card p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.finding-card .data-point {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.finding-card.nocturnal .data-point {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.finding-card.temperature .data-point {
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #chart-containers {
+        flex-direction: column;
+        gap: 2em;
+    }
+    
+    #boxplot-container,
+    #temp-by-sex-chart {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .key-findings {
+        grid-template-columns: 1fr;
+    }
+}
+/* end of styling of section 11*/

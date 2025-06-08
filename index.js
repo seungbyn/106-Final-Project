@@ -465,33 +465,20 @@ document.getElementById('sick3').addEventListener('click', function() {
 
 // check for box and whiskers or barplot logic 
 document.addEventListener("DOMContentLoaded", function () {
-  const select = document.getElementById("chart-select");
+  const boxCheckbox = document.getElementById("toggle-box");
+  const barCheckbox = document.getElementById("toggle-bar");
   const box = document.getElementById("boxplot-container");
   const bar = document.getElementById("temp-by-sex-chart");
+  const activityToggle = document.getElementById("toggle-container");
 
-  if (!select || !box || !bar) {
-    console.error("Missing element(s):", {
-      select,
-      box,
-      bar
-    });
-    return;
+  function updateChartDisplay() {
+    box.style.display = boxCheckbox.checked ? "block" : "none";
+    bar.style.display = barCheckbox.checked ? "block" : "none";
+    activityToggle.style.display = boxCheckbox.checked ? "block" : "none";
   }
 
-  // Set initial state - show box plot by default
-  function setInitialState() {
-    box.style.display = "block";
-    bar.style.display = "none";
-  }
+  boxCheckbox.addEventListener("change", updateChartDisplay);
+  barCheckbox.addEventListener("change", updateChartDisplay);
 
-  // Call initial state immediately
-  setInitialState();
-  
-  // Also set it after a short delay to ensure charts have loaded
-  setTimeout(setInitialState, 100);
-
-  select.addEventListener("change", function () {
-    box.style.display = select.value === "box" ? "block" : "none";
-    bar.style.display = select.value === "bar" ? "block" : "none";
-  });
+  updateChartDisplay(); // Initial render
 });
