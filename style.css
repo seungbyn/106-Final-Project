@@ -174,6 +174,7 @@ section {
 
 .three {
   background: #ffffff; 
+  overflow-x: visible; 
 }
 
 .instructions {
@@ -694,3 +695,448 @@ input[type="checkbox"]:focus {
   visibility: visible;
   opacity: 1;
 }
+ /*demo vide */
+ /* slide 10*/
+ .fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When visible */
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* section five */
+section.five {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.slide-text {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.annotated-chart {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.annotated-chart img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+.annotation {
+  position: absolute;
+  background: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.reveal-on-hover {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #333;
+  position: relative;
+}
+
+.hover-info {
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #666;
+  transition: opacity 0.3s ease;
+}
+
+.reveal-on-hover:hover .hover-info {
+  visibility: visible;
+  opacity: 1;
+}
+/* slide 10 end*/
+
+/*slide 0*/
+.zero {
+  padding-left: 20%;       /* push everything right a bit */
+  padding-right: 0%;       /* keep some space on right */
+  gap: 1em;
+}
+/*end slide 0*/
+.twelve {
+  background-color: #c3c3c3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .mouse-timeline {
+    display: flex;
+    width: 80%;
+    max-width: 800px;
+    margin: 2rem auto;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #252525;
+    z-index: 1;
+  }
+
+  .timeline-tick {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-marker {
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 3px solid #252525;
+    border-radius: 50%;
+  }
+
+  .timeline-label {
+    font-size: 0.9rem;
+    color: #555;
+    white-space: nowrap;
+    position: absolute;
+    top: 20px;
+  }
+
+}
+/* styling for emoji slide*/
+  .bubble-title {
+    display: inline-block;
+    position: relative;
+    background: #4aa56d7a;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(61, 84, 48, 0.1);
+    margin: 20px 0;
+  }
+/* text styling */
+.pink-drop-shadow {
+  text-shadow: 2px 2px 0 #ffb6c1; /* Light pink shadow */
+  font-weight: 600; /* Slightly bold */
+  color: #000000; 
+}
+
+  .try-again {
+    /* Text styling */
+    color: #b33a3a; /* Dark red text */
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    /* Background and border */
+    background-color: #fff3cd; /* Light yellow background */
+    border: 2px solid #ffc107; /* Amber border */
+    border-radius: 4px;
+    
+    /* Spacing and layout */
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    
+    /* Classic warning triangle icon */
+    position: relative;
+    padding-left: 40px;
+  }
+  
+  /* Optional warning icon */
+  .try-again::before {
+    content: "⚠";
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    color: #dc3545;
+  }
+  
+  /* Hover effect */
+  .try-again:hover {
+    background-color: #ffe8a1;
+    box-shadow: 0 0 8px rgba(255, 193, 7, 0.3);
+  }
+
+/* hover annotation */
+.annotation {
+  position: absolute;
+  background: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+/* Show annotations only when hovering the image */
+.annotated-chart:hover img + .annotation,
+.annotated-chart:hover img ~ .annotation {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* slide 11 styling start*/
+#chart-toggle {
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+#chart-toggle label {
+    margin-right: 1em;
+    font-weight: 500;
+    color: #444;
+}
+
+#chart-toggle input[type="checkbox"] {
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    accent-color: #667eea;
+}
+
+/* Activity Toggle */
+#toggle-container {
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    display: none;
+}
+
+.activity-toggle-wrapper {
+    background: rgba(255,255,255,0.8);
+    padding: 12px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.activity-toggle-wrapper label {
+    font-weight: 500;
+    color: #555;
+}
+
+.activity-toggle-wrapper input[type="checkbox"] {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    accent-color: #667eea;
+}
+
+/* Chart Containers */
+#chart-containers {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    align-items: flex-start;
+    margin-top: 2.5em;
+}
+
+#boxplot-container,
+#temp-by-sex-chart {
+    width: 600px;
+    height: 450px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#temp-by-sex-chart {
+    display: none;
+}
+
+/* Key Findings */
+.key-findings {
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2em;
+}
+
+.finding-card {
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.finding-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.finding-card.nocturnal {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    border-left: 5px solid #667eea;
+}
+
+.finding-card.temperature {
+    background: linear-gradient(135deg, rgba(240, 147, 251, 0.1), rgba(245, 87, 108, 0.1));
+    border-left: 5px solid #f093fb;
+}
+
+.finding-card h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.finding-card p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.finding-card .data-point {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.finding-card.nocturnal .data-point {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.finding-card.temperature .data-point {
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #chart-containers {
+        flex-direction: column;
+        gap: 2em;
+    }
+    
+    #boxplot-container,
+    #temp-by-sex-chart {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .key-findings {
+        grid-template-columns: 1fr;
+    }
+}
+/* end of styling of section 11*/
+
+/* First slide header */
+
+.centered-header {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.centered-header h1.animated-txt {
+  margin: 0 auto;
+  max-width: unset;  /* override the 80% */
+  display: inline-block;
+}
+
+/* first visualization header */
+
+.centered-question {
+  width: 100%;
+  overflow-x: auto;       /* allows scroll if needed */
+  white-space: nowrap;    /* keeps everything on one line */
+  text-align: center;
+}
+
+.centered-question h1 {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 1.9rem;       /* reduce if too big for screen */
+  font-weight: 700;
+  padding: 0 1rem;         /* add side padding to avoid clipping */
+}
+
+
+.ten {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 4em 2em;
+  box-sizing: border-box;
+}
+
+.ten .txts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.ten h1.animated-txt {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  max-width: 900px;
+  margin-top: 3rem
+}
+
+.ten #mouse-temp-chart {
+  width: 100%;
+  max-width: 2400px;
+  min-height: 800px;
+  margin-top: 3em;
+}
+
