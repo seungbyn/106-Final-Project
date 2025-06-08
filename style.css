@@ -1097,3 +1097,7 @@ section.five {
   opacity: 1;
   transform: scale(1);
 }
+
+#boxplot-container {
+  overflow: visible;
+}

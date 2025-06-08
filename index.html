@@ -225,34 +225,32 @@
         </section>
 
         <section class="eleven">
-            <!-- TODO styling/animation to emphasize key words and fill up page -->
             <div class="conclusion-container">
                 <h1 class="animated-txt">Specifically...</h1>
-            <div style="overflow-x: auto; margin-top: 2em;">
-                <div style="display: flex; gap: 2%; min-width: 1200px;">
-                    <!--<iframe src="data/light_dark_temp.html" 
-                            style="flex: 1; height: 400px; min-width: 600px;" 
-                            frameborder="0"></iframe>
-                    <iframe src="data/temp_by_sex.html" 
-                            style="flex: 1; height: 400px; min-width: 600px;" 
-                            frameborder="0"></iframe>-->
-                   <div style="display: flex; justify-content: center; padding: 20px 0;">
-  <div id="temp-by-sex-chart" style="width: 600px; height: 500px;"></div>
-</div>
-                <!--<h2>scroll -></h2>-->
-            
-            
-                    <div class="key-findings">
-                        <div class="finding-card">
-                            <h3>Mice are Nocturnal</h3>
-                            <p>Mice have higher body temperatures during night hours, reaching up to<span class="data-point"> 3°C</span> above daytime levels</p>
-                        </div>
-                        <div class="finding-card">
-                            <h3>Females are Hotter ;)</h3>
-                            <p>Female mice show temperatures <span class="data-point">consistently higher</span> than males regardless of time of day</p>
-                        </div>
-                    </div>
-            
+
+                <!-- Dropdown Selector -->
+                <div style="text-align: center; margin-top: 1.5em;">
+                <label for="chart-select"><strong>Choose a chart view:</strong></label>
+                <select id="chart-select" style="margin-left: 10px; padding: 6px 10px; font-size: 1rem;">
+                    <option value="box">Box & Whisker Plot</option>
+                    <option value="bar">Bar Plot</option>
+                </select>
+                </div>
+
+                <div id="chart-containers" style="display: flex; justify-content: center; margin-top: 2em;">
+                <div id="boxplot-container" style="width: 600px; height: 550px;"></div>
+                <div id="temp-by-sex-chart" style="width: 600px; height: 500px; display: none;"></div>
+                </div>
+
+                <div class="key-findings" style="margin-top: 2em;">
+                <div class="finding-card">
+                    <h3>Mice are Nocturnal</h3>
+                    <p>Mice have higher body temperatures during night hours, reaching up to<span class="data-point"> 3°C</span> above daytime levels</p>
+                </div>
+                <div class="finding-card">
+                    <h3>Females are Hotter ;)</h3>
+                    <p>Female mice show temperatures <span class="data-point">consistently higher</span> than males regardless of time of day</p>
+                </div>
                 </div>
             </div>
         </section>
@@ -267,6 +265,7 @@
     <script src="mouse_temp_chart.js"></script>
     <script src="temp_by_sex.js"></script>
     <script src="lighbulb.js"></script>
+    <script src="boxplot.js"></script>
     <script type="module">
         import { renderTemperaturePlot } from './interactiveVisPlot.js';
 

@@ -462,3 +462,36 @@ document.getElementById('sick2').addEventListener('click', function() {
 document.getElementById('sick3').addEventListener('click', function() {
   flashScreen('red');
 });
+
+// check for box and whiskers or barplot logic 
+document.addEventListener("DOMContentLoaded", function () {
+  const select = document.getElementById("chart-select");
+  const box = document.getElementById("boxplot-container");
+  const bar = document.getElementById("temp-by-sex-chart");
+
+  if (!select || !box || !bar) {
+    console.error("Missing element(s):", {
+      select,
+      box,
+      bar
+    });
+    return;
+  }
+
+  // Set initial state - show box plot by default
+  function setInitialState() {
+    box.style.display = "block";
+    bar.style.display = "none";
+  }
+
+  // Call initial state immediately
+  setInitialState();
+  
+  // Also set it after a short delay to ensure charts have loaded
+  setTimeout(setInitialState, 100);
+
+  select.addEventListener("change", function () {
+    box.style.display = select.value === "box" ? "block" : "none";
+    bar.style.display = select.value === "bar" ? "block" : "none";
+  });
+});
