@@ -44,15 +44,16 @@
             <p class="lights fade-in" id="on2">📊 Click to learn about our data</p>
             <a id="data-link" class="fade-in" style="display:none;" target="_blank" href="https://docs.google.com/spreadsheets/d/1RXL_oUa1IYxnqfCW-9duz3M83wPlki4y/edit?gid=1872476945#gid=1872476945">Mouse Data!</a>
             <p id="data-description" class="fade-in" style="display:none;">
-            Every minute, the activity level and body temperature of healthy, male and female mice were collected for 2 weeks. Each day contained light and dark cycles.
+            Every minute, the activity level and body temperature of 13, healthy male<bdi style="font-size:0.7rem">(m1-m13)</bdi> and female<bdi style="font-size:0.7rem">(f1-f13)</bdi> mice were collected for 2 weeks. Each day contained light and dark cycles.
             </p>
-            <h1 class="fade-in" id="lights-text" style="display:none;">The lights were on for 12 hours.</h1>
+            <h1 class="lights fade-in" id="lights-text" style="display:none;">The lights were on for 12 hours.</h1>
         </div>
         </section>
 
         <section class="two light-bg">
             <div class="txts">
                 <h1 class="clickable" id="off1">Then, lights were off for 12 hours.</h1>
+                <!-- <h2>click!</h2> -->
                 <div id="dark-content">
                 <p>Without light, a different rhythm begins.</p>
                 <p>Activity patterns don’t vanish—they shift. But how exactly?</p>
@@ -64,11 +65,11 @@
             <div class="box" id="box-one-a">
                 <div class="instructions" id="vis-instructions">
                 <h1>How do mice react to <bdi id="on2">light</bdi> vs. <bdi id="off2">dark</bdi> cycles?</h1>
-                <h2>Follow instructions below:</h2>
+                <h2>Follow instructions below: <bdi style="font-size: xx-small; color: grey">or don't, it's a free country 🇺🇸</bdi></h2>
                 <p><bdi class="step-n">1</bdi>Switch <bdi class="button-like">Time Mode</bdi> to <b>Minutes</b></p>
                 <p><bdi class="step-n">2</bdi>Switch <bdi class="button-like">Data Type</bdi> to <b>Activity</b></p>
                 <p><bdi class="step-n">3</bdi>Enter <bdi class="button-like">Time Range</bdi> as <b>0-1440</b> (1440 mins = 24 hrs = 1 day)</p>
-                <p><bdi class="step-n">4</bdi>What do you notice? Look at the shaded regions.</p>
+                <!-- <p><bdi class="step-n">4</bdi>What do you notice? Look at the shaded regions.</p> -->
                 </div>
                 <hr>
                 <div class="controls">
@@ -133,12 +134,12 @@
             <div class="annotated-chart">
                 <img src="data/staticVis.png" alt="Mice Activity Over Time">
 
-                <div class="annotation" style="top: 70%; left: 25%;">🌙 Dark Cycle Begins</div>
+                <div class="annotation" style="top: 70%; left: 25%;">🌙 Dark Cycle Ends</div>
                 <div class="annotation" style="top: 10%; left: 15%;">Spike in Activity Here!</div>
             </div>
 
             <p class="reveal-on-hover">
-                Curious why this matters?
+                ℹ️ Curious why this matters?
                 <span class="hover-info">
                 Understanding nocturnal cycles can guide medical research, lighting design, and even pet care 🐭💡
                 </span>
@@ -148,12 +149,12 @@
         <section class="seven">
             <!-- TODO styling, make the text more webpage(y)-->
             <div id="estrous-chart-container">
-                <h1 class="chart-title">Now let’s look just at female mice.</h1>
+                <h1 class="chart-title">Now, let’s look just at <bdi class="pink-drop-shadow">female</bdi> mice.</h1>
                 <p class="chart-narrative">
-                Like many mammals, female mice have a 4 day estrous cycle with the day of Estrus indicating the day of ovulation.</p>
-                <p class = "chart-narrative">Interact with the visual below. Pay attention to patterns. Note light vs. dark cycles.</p>
+                Like many mammals, female mice have a 4 day estrous cycle with the day of Estrus indicating the day of ovulation. Interact with the visual below. What patterns can you find?</p>
+                <!-- <p class = "chart-narrative">Interact with the visual below. Pay attention to patterns. Note light vs. dark cycles.</p> -->
                 <div class="insight-hover-area">
-                    <span class="hover-label">🛈 Hover for a chart tip</span>
+                    <span class="hover-label">ℹ️ Chart Tip</span>
                     <div class="hidden-insight">
                         Use the brush selector to find interesting aggregates for the selected area!
                     </div>
@@ -219,7 +220,7 @@
                 </span>!
               </h1>
           
-              <p class="hover-note">Tip: Hover over the temperature with your 🐭 to convert to Celsius</p>
+              <p class="hover-note">ℹ️ Hover over the temperatures (above) with your 🐭 to convert to Celsius</p>
           
               <div id="mouse-temp-chart" class="chart-container fade-in-section"></div>
               
@@ -229,7 +230,7 @@
 
         <section class="twelve">
             <h1 class="animated-txt">Are these mice <span class="vocab-word"><u>healthy</u><span class="thought-bubble">97.9°F to 98.9°F<br>(36.61°C to 37.17°C)</span></span>?</h1>
-            <h2>Click on each mouse to learn more.</h2>
+            <h2>ℹ️ Click on each mouse to learn more.</h2>
             <div class="emoji-buttons">
                 <span id='healthy1' class="emoji"><span class="vocab-word">🐭<span class="thought-bubble">HEALTHY!<br>36.85°C<br>female(f3)</span></span></span>
                 <span id='sick1' class="emoji"><span class="vocab-word">🐭<span class="thought-bubble">SICK!<br>38.02°C<br>male(m5)</span></span></span>
@@ -260,42 +261,13 @@
                     <div class="timeline-label">Lights Off</div>
                 </div>
             </div>
-            <h1 class="animated-txt">A single temperature reading clearly does not tell the whole story in terms of mouse health.</h1>
+            <h1 class="animated-txt">A single temperature reading clearly does not tell the whole story in terms of mouse health. Specifically...</h1>
         </section>
 
 
         <section class="eleven">
             <div class="conclusion-container">
-                <h1 class="animated-txt">Specifically...</h1>
-
-                <!-- Main Chart Type Toggles -->
-                <div id="chart-toggle">
-                    <label>
-                        <input type="checkbox" id="toggle-box" checked />
-                        Show Box & Whisker Plot
-                    </label>
-                    <label>
-                        <input type="checkbox" id="toggle-bar" />
-                        Show Bar Plot
-                    </label>
-                </div>
-
-                <!-- Activity Toggle (only for boxplot) -->
-                <div id="toggle-container">
-                    <div class="activity-toggle-wrapper">
-                        <label>
-                            <input type="checkbox" id="toggle-data-type" />
-                            Compare by Activity (uncheck for Temperature)
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Chart Display Area -->
-                <div id="chart-containers">
-                    <div id="boxplot-container"></div>
-                    <div id="temp-by-sex-chart"></div>
-                </div>
-
+                <!-- <h1 class="animated-txt">Specifically...</h1> -->
                 <!-- Key Findings Section -->
                 <div class="key-findings">
                     <div class="finding-card nocturnal">
@@ -315,6 +287,33 @@
                             than males regardless of time of day
                         </p>
                     </div>
+                </div>
+                <!-- Main Chart Type Toggles -->
+                <div id="chart-toggle">
+                    <label>
+                        <input type="checkbox" id="toggle-box" checked />
+                        Show Box & Whisker Plot
+                    </label>
+                    <label>
+                        <input type="checkbox" id="toggle-bar" checked/>
+                        Show Bar Plot
+                    </label>
+                </div>
+
+                <!-- Activity Toggle (only for boxplot) -->
+                <div id="toggle-container">
+                    <div class="activity-toggle-wrapper">
+                        <label>
+                            <input type="checkbox" id="toggle-data-type" />
+                            Compare by Activity (uncheck for Temperature)
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Chart Display Area -->
+                <div id="chart-containers">
+                    <div id="boxplot-container"></div>
+                    <div id="temp-by-sex-chart"></div>
                 </div>
             </div>
         </section>

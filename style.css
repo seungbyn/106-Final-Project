@@ -198,8 +198,6 @@ section {
 -------------------------------- */
 .clickable {
   cursor: pointer;
-  /* text-decoration: underline dotted; */
-  /* font-style: italic; */
 }
 
 .lights {
@@ -216,7 +214,7 @@ section {
   font-size: 20px;
   color: black;
   /* rounded background box */
-  padding: 5px;
+  padding: 12px;
   border-radius: 10px;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -265,12 +263,6 @@ section {
   text-shadow: 1px 1px 4px #514f44;
 }
 
-/* #off1 {
-  color: rgb(154, 154, 154);
-  text-shadow: 1px 1px 2px #ffffff;
-  font-size: 40px;
-} */
-
 @keyframes fadeIn {
   from {opacity: 0; }
   to {opacity: 1;}
@@ -314,12 +306,12 @@ section {
   font-weight: 700;
   cursor: pointer;
   color: black;  /* Start dark on light bg */
+  text-shadow: 0 0 10px #aaa, 0 0 25px #ddd;
   transition: color 1.2s ease, text-shadow 0.4s ease, font-size 0.4s ease;
   animation: pulse 2s infinite;
 }
 #off1:hover {
-  text-shadow: 0 0 10px #aaa, 0 0 25px #ddd;
-  font-size: 2.7rem;
+  font-size: 2.6rem;
 }
 
 #dark-content {
@@ -372,7 +364,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  max-width: 600px;
+  max-width: 650px;
   /* center items */
   margin: 0 auto;
 }
@@ -650,7 +642,7 @@ input[type="checkbox"]:focus {
 .emoji-buttons {
   display: flex;
   gap: 30px;
-  justify-content: center;
+  justify-content: left;
   margin-top: 30px;
 }
 
@@ -1193,7 +1185,7 @@ section.five {
   .bubble-title {
     display: inline-block;
     position: relative;
-    background: #4aa56d7a;
+    background: #5657637a;
     color: white;
     padding: 12px 20px;
     border-radius: 20px;
@@ -1494,3 +1486,10 @@ section.five {
 }
 
 /*end estorous tooltip*/
+
+/* final styling */
+.emp {
+  /* bolded and slightly bigger text */
+  font-weight: bold;
+  font-size: 1.1rem;
+}

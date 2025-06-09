@@ -421,9 +421,9 @@ document.getElementById('moon-button').addEventListener('click', function () {
 
   summary.innerHTML = `
     <h1>✅ Mice are nocturnal!</h1>
-    <p>Based on the visualization, mice show more activity and higher body temperature during the dark periods.</p>
+    <p>Based on the visualization, mice show <bdi class = "emp">more activity</bdi> and <bdi class = "emp">higher body temperature</bdi> during the dark periods.</p>
     <p>This pattern suggests they are adapted to be more active at night — sleeping during the day and foraging at night.</p>
-    <h2 style="padding-top:15px">Hover over the graph below to reveal key insights.</h2>
+    <h2 style="padding-top:15px">ℹ️ Hover over the graph below to reveal key insights.</h2>
   `;
 
   document.getElementById('slide-five').scrollIntoView({ behavior: 'smooth' });
