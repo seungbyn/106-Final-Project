@@ -1485,7 +1485,7 @@ section.five {
   pointer-events: none;
   transform: translateX(-50%);
   left: 50%;  
-  top: 400px;
+  top: 375px;
   z-index: 999;
 }
 
