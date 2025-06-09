@@ -90,43 +90,45 @@ section {
 
 /*slide 0 intro blurb styling */
 .intro-blurb {
-  font-size: 1.25rem;
+  /* display: flex; */
+  /* gap: 1rem; */
+  font-size: 1rem;
   line-height: 1.8;
-  max-width: 50rem;
-  margin: 1.5rem auto;
-  text-align: center;
+  max-width: 60rem;
+  /* margin: 1.5rem auto; */
+  text-align: left;
 }
 
 .central-question {
   font-size: 1.5rem;
   font-weight: 600;
   margin-top: 2rem;
-  color: #222;
-  text-align: center;
+  /* color: #222; */
+  /* text-align: center; */
   font-style: italic;
 }
 
 @keyframes pulse {
   0% {
     transform: scale(1);
-    opacity: 1;
+    opacity: 0.85;
   }
   50% {
-    transform: scale(1.08);
-    opacity: 0.85;
+    transform: scale(1.02);
+    opacity: 1;
   }
   100% {
     transform: scale(1);
-    opacity: 1;
+    opacity: 0.85;
   }
 }
 
 .centered-temp {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 800;
   color: #d62828;
-  text-align: center;
-  margin: 1.5rem 0;
+  /* text-align: center; */
+  margin: 1rem 0;
   font-family: 'Playfair Display', sans-serif;
   animation: pulse 2s ease-in-out infinite;
 }
@@ -196,8 +198,8 @@ section {
 -------------------------------- */
 .clickable {
   cursor: pointer;
-  text-decoration: underline dotted;
-  font-style: italic;
+  /* text-decoration: underline dotted; */
+  /* font-style: italic; */
 }
 
 .lights {
@@ -263,11 +265,11 @@ section {
   text-shadow: 1px 1px 4px #514f44;
 }
 
-#off1 {
+/* #off1 {
   color: rgb(154, 154, 154);
   text-shadow: 1px 1px 2px #ffffff;
   font-size: 40px;
-}
+} */
 
 @keyframes fadeIn {
   from {opacity: 0; }
@@ -308,14 +310,16 @@ section {
 
 #off1 {
   font-size: 2.5rem;
-  font-style: italic;
+  /* font-style: italic; */
   font-weight: 700;
   cursor: pointer;
   color: black;  /* Start dark on light bg */
-  transition: color 1.2s ease, text-shadow 0.4s ease;
+  transition: color 1.2s ease, text-shadow 0.4s ease, font-size 0.4s ease;
+  animation: pulse 2s infinite;
 }
 #off1:hover {
   text-shadow: 0 0 10px #aaa, 0 0 25px #ddd;
+  font-size: 2.7rem;
 }
 
 #dark-content {
