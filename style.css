@@ -1471,3 +1471,22 @@ section.five {
 }
 
 /*section 13 end*/
+
+/*estrous tooltip*/
+#tooltip-estrous {
+  position: absolute;
+  opacity: 0;
+  background: #888686;
+  padding: 6px 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(175, 173, 173, 0.15);
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  pointer-events: none;
+  transform: translateX(-50%);
+  left: 50%;  
+  top: 400px;
+  z-index: 999;
+}
+
+/*end estorous tooltip*/
