@@ -1017,11 +1017,20 @@ section.five {
 
 .fahrenheit,
 .celsius {
-  color: crimson;
   font-weight: bold;
-  transition: opacity 0.3s ease;
+  font-size: 2.2rem;
+  color: #e63946; /* stylish crimson red */
+  position: relative;
+  transition: all 0.4s ease;
+  text-shadow: 1px 1px 2px rgba(230, 57, 70, 0.3);
 }
-
+.degree {
+  font-size: 1.1rem;
+  vertical-align: super;
+  margin-left: 2px;
+  color: #ffb703;
+  font-weight: normal;
+}
 .celsius {
   display: none;
 }
@@ -1056,6 +1065,63 @@ section.five {
 }
 .ten {
   margin-top: 5em; /* or more */
+}
+.fahrenheit,
+.celsius {
+  font-weight: bold;
+  font-size: 2.2rem;
+  color: #e63946; /* stylish crimson red */
+  position: relative;
+  transition: all 0.4s ease;
+  text-shadow: 1px 1px 2px rgba(230, 57, 70, 0.3);
+}
+
+.degree {
+  font-size: 1.1rem;
+  vertical-align: super;
+  margin-left: 2px;
+  color: #ffb703;
+  font-weight: normal;
+}
+
+.temp-hover {
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  padding: 0.1em 0.3em;
+  border-radius: 0.4em;
+}
+
+.temp-hover:hover {
+  transform: scale(1.08);
+  background: rgba(255, 183, 3, 0.1);
+}
+
+.temp-hover:hover .fahrenheit {
+  display: none;
+}
+
+.temp-hover:hover .celsius {
+  display: inline;
+}
+
+.fahrenheit::after,
+.celsius::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #ffb703;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: left;
+}
+
+.temp-hover:hover .celsius::after {
+  transform: scaleX(1);
 }
 
 /* slide 10 end*/
@@ -1358,3 +1424,62 @@ section.five {
     }
 }
 /* end of styling of section 11*/
+/*section 13 start*/
+.thirteen {
+  padding: 6em 2em;
+  text-align: center;
+  user-select: none;
+}
+
+.thirteen .animated-txt {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  line-height: 1.2;
+  /* Darker red-orange gradient */
+  background: linear-gradient(90deg, #a82a0e, #cc4a08);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  transition: all 0.3s ease;
+  /* Subtle dark shadow */
+  text-shadow: 1px 1px 3px rgba(80, 20, 10, 0.6);
+}
+
+.thirteen em {
+  font-style: normal;
+  font-weight: 900;
+  position: relative;
+  cursor: pointer;
+  color: inherit; /* keep gradient text */
+  transition: color 0.3s ease;
+  display: inline-block; /* needed for transform */
+  animation: pulse-expand 2.5s ease-in-out infinite;
+  /* subtle shadow for pop */
+  text-shadow: 1px 1px 5px rgba(140, 40, 20, 0.8);
+}
+
+.thirteen em::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #7a1c00; /* darker orange underline */
+  bottom: 0;
+  left: 0;
+  border-radius: 3px;
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  transform: scaleX(1); /* underline always visible */
+}
+
+@keyframes pulse-expand {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+/*section 13 end*/
