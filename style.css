@@ -635,7 +635,7 @@ input[type="checkbox"]:focus {
 }
 
 .seven {
-  color: white;
+  background-color: rgb(235, 235, 235);
 }
 
 /* emoji styling */
@@ -1425,6 +1425,9 @@ section.five {
   padding: 6em 2em;
   text-align: center;
   user-select: none;
+  /* background-color: #a82a0e; */
+  /* less opacity on background-color */
+  background-color: rgba(168, 42, 14, 0.2);
 }
 
 
@@ -1434,7 +1437,7 @@ section.five {
   font-size: clamp(2.4rem, 5vw, 3.8rem);
   line-height: 1.2;
   /* Darker red-orange gradient */
-  background: linear-gradient(90deg, #a82a0e, #cc4a08);
+  background: linear-gradient(90deg, #3d0f05, #cc4a08);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
